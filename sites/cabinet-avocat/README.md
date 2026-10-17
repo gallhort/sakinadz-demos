@@ -16,14 +16,21 @@ Le site existe en français et en arabe (RTL), avec un sélecteur de langue dans
 
 ## Choix de design
 
-- **Palette** : marine `#14213d` (texte, en-têtes, bloc coordonnées), pierre `#e5e1da`
-  (fonds de section), bordeaux `#7a1f2b` en touche discrète (filets, numéros, liens).
-- **Typographie** : Cormorant Garamond pour les titres, Source Sans 3 pour le texte.
+Registre éditorial, sobre et haut de gamme, sans effet tape-à-l'œil.
+
+- **Palette** : marine `#14213d` (en-têtes de page, bande de contact, pied de page),
+  pierre `#e5e1da` et papier `#f8f6f2` (fonds), bordeaux `#7a1f2b` en touche discrète
+  (filets, numéros, liens, filet sous les en-têtes).
+- **Typographie** : Cormorant Garamond (titres, italiques, numéros, coordonnées en grand)
+  et Source Sans 3 (texte, petites capitales espacées pour les libellés).
   Ces deux familles n'ont pas de glyphes arabes : la version arabe s'appuie sur les polices
   système (Noto Naskh/Noto Sans Arabic, Amiri, Tahoma…).
-- **Mise en page** : filets fins, chiffres romains pour les six domaines, grilles aérées,
-  aucun effet animé hormis de légères transitions de survol (désactivées avec
-  `prefers-reduced-motion`).
+- **Composition** : grand titre en deux temps (romain puis italique), façade classique dessinée
+  au trait en SVG, bande de coordonnées sous l'en-tête, domaines en liste éditoriale numérotée,
+  phrase de principe d'exercice (ce n'est pas un témoignage), étapes jalonnées, bande finale
+  « Prendre rendez-vous » avec le numéro en grand.
+- **Mouvement** : seulement de légères transitions au survol (soulignement, flèche),
+  désactivées avec `prefers-reduced-motion`.
 - **RTL** : la feuille de style n'utilise que des propriétés logiques (`margin-inline`,
   `inset-inline-start`, `border-block-end`…), la même CSS sert donc les deux sens d'écriture.
 - **Plan d'accès** : plan schématique en SVG (fictif, sans échelle), remplaçable par une carte

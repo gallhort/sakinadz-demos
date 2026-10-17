@@ -11,7 +11,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%2314213d'/%3E%3Crect x='5' y='5' width='38' height='38' fill='none' stroke='%23e5e1da' stroke-width='1.5'/%3E%3Ctext x='24' y='31' text-anchor='middle' font-family='Georgia,serif' font-size='19' fill='%23e5e1da'%3EMD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
 <link rel="stylesheet" href="../css/style.css">
 <script src="../js/main.js" defer></script>
 </head>
@@ -33,35 +33,40 @@
           <li><a href="prestations.html">مجالات التدخل</a></li>
           <li><a href="a-propos.html">من نحن</a></li>
           <li><a href="contact.html" aria-current="page">الاتصال</a></li>
-          <li><a href="mentions-legales.html">البيانات القانونية</a></li>
       </ul>
-      <a class="lang-switch" href="../contact.html" hreflang="fr" lang="fr" title="Version française">Français</a>
+      <div class="site-nav__aside">
+        <a class="nav-phone" href="tel:+21300000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg><span dir="ltr">+213 00 00 00 00</span></a>
+        <a class="lang-switch" href="../contact.html" hreflang="fr" lang="fr" title="Version française">Français</a>
+      </div>
     </nav>
   </div>
 </header>
 <main id="contenu">
   <section class="page-head">
-    <div class="wrap">
-      <p class="eyebrow">الاتصال</p>
+    <div class="wrap page-head__inner">
+      <nav class="crumbs" aria-label="مسار التصفح">
+        <ol><li><a href="index.html">الرئيسية</a></li><li aria-current="page">الاتصال</li></ol>
+      </nav>
+      <p class="eyebrow eyebrow--light">الاتصال</p>
       <h1>الاتصال بالمكتب</h1>
       <p class="lead">يتم الاتصال الأول عبر الهاتف أو البريد الإلكتروني. لا يحتوي هذا الموقع على أي استمارة: لا تمر عبره أي معلومة تخصكم.</p>
     </div>
+    <span class="page-head__orn" aria-hidden="true">§</span>
   </section>
-
   <section class="section">
     <div class="wrap contact-grid">
       <div class="contact-main">
         <h2>معلومات الاتصال</h2>
-        <ul class="facts facts--large">
-          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><p class="facts__k">العنوان</p><address>12، شارع المثال، الطابق الثاني<br>الجزائر الوسطى، ولاية الجزائر</address></div></li>
-          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg><div><p class="facts__k">الهاتف</p><a href="tel:+21300000000" dir="ltr">+213 00 00 00 00</a></div></li>
-          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><div><p class="facts__k">البريد الإلكتروني</p><a href="mailto:contact@exemple.dz">contact@exemple.dz</a>
-            <button class="copy" type="button" data-copy="contact@exemple.dz" data-done="تم نسخ العنوان">نسخ العنوان</button>
-            <span class="copy-status" role="status" aria-live="polite"></span></div></li>
-        </ul>
+        <dl class="coords">
+          <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><dt>العنوان</dt><dd><address>12، شارع المثال، الطابق الثاني<br>الجزائر الوسطى، ولاية الجزائر</address></dd></div>
+          <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg><dt>الهاتف</dt><dd><a class="coords__big" href="tel:+21300000000" dir="ltr">+213 00 00 00 00</a></dd></div>
+          <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><dt>البريد الإلكتروني</dt><dd><a class="coords__big" href="mailto:contact@exemple.dz">contact@exemple.dz</a>
+            <span class="copy-wrap"><button class="copy" type="button" data-copy="contact@exemple.dz" data-done="تم نسخ العنوان">نسخ العنوان</button>
+            <span class="copy-status" role="status" aria-live="polite"></span></span></dd></div>
+        </dl>
         <div class="actions">
-          <a class="btn btn--primary" href="tel:+21300000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg>الاتصال بالمكتب</a>
-          <a class="btn btn--ghost" href="mailto:contact@exemple.dz"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>مراسلة المكتب</a>
+          <a class="btn btn--dark" href="tel:+21300000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg>الاتصال بالمكتب</a>
+          <a class="btn btn--outline" href="mailto:contact@exemple.dz"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>مراسلة المكتب</a>
         </div>
         <p class="hint">يُرجى عدم إرفاق وثائق سرية بأول رسالة: وصف قصير يكفي لتحديد موعد.</p>
       </div>
@@ -71,13 +76,13 @@
         <table>
           <caption class="sr-only">أوقات عمل المكتب</caption>
           <tbody>
-              <tr data-day="0"><th scope="row">الأحد</th><td dir="ltr">9:00 – 12:30 · 14:00 – 17:30</td></tr>
-              <tr data-day="1"><th scope="row">الإثنين</th><td dir="ltr">9:00 – 12:30 · 14:00 – 17:30</td></tr>
-              <tr data-day="2"><th scope="row">الثلاثاء</th><td dir="ltr">9:00 – 12:30 · 14:00 – 17:30</td></tr>
-              <tr data-day="3"><th scope="row">الأربعاء</th><td dir="ltr">9:00 – 12:30 · 14:00 – 17:30</td></tr>
-              <tr data-day="4"><th scope="row">الخميس</th><td dir="ltr">9:00 – 12:30</td></tr>
-              <tr data-day="5"><th scope="row">الجمعة</th><td>مغلق</td></tr>
-              <tr data-day="6"><th scope="row">السبت</th><td>مغلق</td></tr>
+              <tr data-day="0"><th scope="row">الأحد</th><td><span class="slot" dir="ltr">9:00 – 12:30</span><span class="slot" dir="ltr">14:00 – 17:30</span></td></tr>
+              <tr data-day="1"><th scope="row">الإثنين</th><td><span class="slot" dir="ltr">9:00 – 12:30</span><span class="slot" dir="ltr">14:00 – 17:30</span></td></tr>
+              <tr data-day="2"><th scope="row">الثلاثاء</th><td><span class="slot" dir="ltr">9:00 – 12:30</span><span class="slot" dir="ltr">14:00 – 17:30</span></td></tr>
+              <tr data-day="3"><th scope="row">الأربعاء</th><td><span class="slot" dir="ltr">9:00 – 12:30</span><span class="slot" dir="ltr">14:00 – 17:30</span></td></tr>
+              <tr data-day="4"><th scope="row">الخميس</th><td><span class="slot" dir="ltr">9:00 – 12:30</span></td></tr>
+              <tr data-day="5" class="is-closed"><th scope="row">الجمعة</th><td><span class="slot">مغلق</span></td></tr>
+              <tr data-day="6" class="is-closed"><th scope="row">السبت</th><td><span class="slot">مغلق</span></td></tr>
           </tbody>
         </table>
         <p class="hint">الاستقبال بموعد مسبق فقط. أوقات وهمية، قابلة للتعديل.</p>
@@ -87,8 +92,8 @@
 
   <section class="section section--stone" aria-labelledby="plan-title">
     <div class="wrap">
-      <header class="section__head">
-        <h2 id="plan-title">مخطط الوصول</h2>
+      <header class="section__head section__head--split">
+        <div><p class="eyebrow">العنوان</p><h2 id="plan-title">مخطط الوصول</h2></div>
         <p>مخطط تقريبي دون مقياس. في الموقع الحقيقي، يمكن تعويضه بخريطة تفاعلية.</p>
       </header>
       <figure class="plan-fig">
@@ -140,8 +145,8 @@
 </main>
 <footer class="site-footer">
   <div class="wrap site-footer__grid">
-    <div>
-      <p class="site-footer__brand">مكتب الأستاذ ديمو</p>
+    <div class="site-footer__id">
+      <a class="brand brand--light" href="index.html"><svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="45" height="45" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="5" y="5" width="38" height="38" fill="none" stroke="currentColor" stroke-width=".75"/><text x="24" y="31" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="600" fill="currentColor">MD</text></svg><span class="brand__text"><span class="brand__name">مكتب الأستاذ ديمو</span><span class="brand__sub">محامٍ · الجزائر العاصمة</span></span></a>
       <p>مكتب محاماة وهمي أُنشئ لتوضيح مقال. لا يجمع هذا الموقع أي بيانات.</p>
     </div>
     <div>
@@ -149,6 +154,7 @@
       <address>
         <p>12، شارع المثال، الطابق الثاني<br>الجزائر الوسطى، ولاية الجزائر</p>
         <p><a href="tel:+21300000000" dir="ltr">+213 00 00 00 00</a><br><a href="mailto:contact@exemple.dz">contact@exemple.dz</a></p>
+        <p>من الأحد إلى الخميس، بموعد مسبق</p>
       </address>
     </div>
     <nav aria-label="الصفحات">

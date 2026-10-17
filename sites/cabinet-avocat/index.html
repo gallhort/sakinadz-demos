@@ -11,7 +11,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%2314213d'/%3E%3Crect x='5' y='5' width='38' height='38' fill='none' stroke='%23e5e1da' stroke-width='1.5'/%3E%3Ctext x='24' y='31' text-anchor='middle' font-family='Georgia,serif' font-size='19' fill='%23e5e1da'%3EMD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/main.js" defer></script>
 </head>
@@ -33,9 +33,11 @@
           <li><a href="prestations.html">Prestations</a></li>
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="mentions-legales.html">Mentions légales</a></li>
       </ul>
-      <a class="lang-switch" href="ar/index.html" hreflang="ar" lang="ar" title="Version arabe">العربية</a>
+      <div class="site-nav__aside">
+        <a class="nav-phone" href="tel:+21300000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg><span dir="ltr">+213 00 00 00 00</span></a>
+        <a class="lang-switch" href="ar/index.html" hreflang="ar" lang="ar" title="Version arabe">العربية</a>
+      </div>
     </nav>
   </div>
 </header>
@@ -43,80 +45,124 @@
   <section class="hero">
     <div class="wrap hero__grid">
       <div class="hero__text">
-        <p class="eyebrow">Cabinet d'avocat · Alger-Centre</p>
-        <h1>Cabinet Maître Démo</h1>
+        <p class="eyebrow eyebrow--light">Avocat · Alger-Centre</p>
+        <h1>Cabinet <em>Maître Démo</em></h1>
         <p class="lead">Un cabinet d'avocat à Alger qui conseille et assiste particuliers et entreprises, en français et en arabe.</p>
         <div class="actions">
-          <a class="btn btn--primary" href="tel:+21300000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg>Appeler le cabinet</a>
-          <a class="btn btn--ghost" href="mailto:contact@exemple.dz"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>Écrire au cabinet</a>
+          <a class="btn btn--light" href="tel:+21300000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg>Appeler le cabinet</a>
+          <a class="btn btn--line" href="mailto:contact@exemple.dz"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>Écrire au cabinet</a>
         </div>
-        <p class="hint">Le premier contact se fait par téléphone ou par e-mail. Ce site ne contient aucun formulaire et ne recueille aucune information.</p>
+        <p class="hero__hint">Premier contact par téléphone ou par e-mail. Ce site ne contient aucun formulaire.</p>
       </div>
-      <aside class="card-contact" aria-labelledby="coord-title">
-        <h2 id="coord-title" class="card-contact__title">Coordonnées du cabinet</h2>
-        <ul class="facts">
-          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>12, rue de l'Exemple, 2<sup>e</sup> étage<br>Alger-Centre, wilaya d'Alger</span></li>
-          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg><a href="tel:+21300000000" dir="ltr">+213 00 00 00 00</a></li>
-          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><a href="mailto:contact@exemple.dz">contact@exemple.dz</a></li>
-          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Dimanche – jeudi, sur rendez-vous</span></li>
-        </ul>
-      </aside>
+      <div class="hero__art"><svg class="facade" viewBox="0 0 400 440" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round">
+          <path d="M28 118 200 34l172 84Z"/><path d="M62 110 200 48l138 62Z" opacity=".55"/>
+          <circle cx="200" cy="86" r="13" class="facade__accent"/>
+          <rect x="22" y="118" width="356" height="30"/><path d="M22 132h356" opacity=".5"/>
+          <path d="M22 148h356v10H22Z" opacity=".7"/>
+          <g id="col">
+            <path d="M58 158h48v10H58Z"/><path d="M62 168h40v6H62Z" opacity=".7"/>
+            <path d="M64 174v196M100 174v196"/>
+            <path d="M73 178v188M82 178v188M91 178v188" opacity=".35"/>
+            <path d="M60 370h44v8H60Z"/><path d="M56 378h52v8H56Z" opacity=".7"/>
+          </g>
+          <use href="#col" x="80"/><use href="#col" x="160"/><use href="#col" x="240"/>
+          <path d="M14 386h372v14H14Z"/><path d="M6 400h388v14H6Z" opacity=".75"/><path d="M0 414h400v14H0Z" opacity=".5"/>
+        </g>
+      </svg></div>
     </div>
+  </section>
+
+  <section class="infobar" aria-label="Coordonnées">
+    <dl class="wrap infobar__grid">
+      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><dt>Adresse</dt><dd>12, rue de l'Exemple, 2<sup>e</sup> étage<br>Alger-Centre, wilaya d'Alger</dd></div>
+      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg><dt>Téléphone</dt><dd><a href="tel:+21300000000" dir="ltr">+213 00 00 00 00</a></dd></div>
+      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><dt>E-mail</dt><dd><a href="mailto:contact@exemple.dz">contact@exemple.dz</a></dd></div>
+      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><dt>Réception</dt><dd>Dimanche – jeudi<br>sur rendez-vous</dd></div>
+    </dl>
   </section>
 
   <section class="section" aria-labelledby="domaines-title">
     <div class="wrap">
-      <header class="section__head">
-        <p class="eyebrow">Domaines d'intervention</p>
-        <h2 id="domaines-title">Six domaines, présentés simplement</h2>
-        <p>Chaque domaine est décrit sur la page Prestations. Pour savoir si votre situation relève de l'un d'eux, le plus simple est d'appeler le cabinet.</p>
+      <header class="section__head section__head--split">
+        <div>
+          <p class="eyebrow">Domaines d'intervention</p>
+          <h2 id="domaines-title">Six domaines, présentés simplement</h2>
+        </div>
+        <p>Chaque domaine est détaillé sur la page Prestations. Pour savoir si votre situation relève de l'un d'eux, le plus simple est d'appeler le cabinet.</p>
       </header>
       <ol class="domains">
           <li class="domain">
-            <span class="domain__num" aria-hidden="true">I</span>
-            <h3 class="domain__title"><a href="prestations.html#affaires">Droit des affaires</a></h3>
-            <p>Conseil aux entreprises et aux entrepreneurs dans la vie de leur société : constitution, contrats, relations avec les partenaires.</p>
+            <span class="domain__num" aria-hidden="true">01</span>
+            <div class="domain__body">
+              <h3 class="domain__title"><a href="prestations.html#affaires">Droit des affaires</a></h3>
+              <p>Conseil aux entreprises et aux entrepreneurs dans la vie de leur société : constitution, contrats, relations avec les partenaires.</p>
+            </div>
+            <svg class="ico ico--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
           </li>
           <li class="domain">
-            <span class="domain__num" aria-hidden="true">II</span>
-            <h3 class="domain__title"><a href="prestations.html#famille">Droit de la famille</a></h3>
-            <p>Écoute et conseil dans les situations familiales, avec la discrétion qu'elles demandent.</p>
+            <span class="domain__num" aria-hidden="true">02</span>
+            <div class="domain__body">
+              <h3 class="domain__title"><a href="prestations.html#famille">Droit de la famille</a></h3>
+              <p>Écoute et conseil dans les situations familiales, avec la discrétion qu'elles demandent.</p>
+            </div>
+            <svg class="ico ico--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
           </li>
           <li class="domain">
-            <span class="domain__num" aria-hidden="true">III</span>
-            <h3 class="domain__title"><a href="prestations.html#immobilier">Droit immobilier</a></h3>
-            <p>Conseil lors de l'achat, de la vente ou de la location d'un bien, et en cas de litige.</p>
+            <span class="domain__num" aria-hidden="true">03</span>
+            <div class="domain__body">
+              <h3 class="domain__title"><a href="prestations.html#immobilier">Droit immobilier</a></h3>
+              <p>Conseil lors de l'achat, de la vente ou de la location d'un bien, et en cas de litige.</p>
+            </div>
+            <svg class="ico ico--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
           </li>
           <li class="domain">
-            <span class="domain__num" aria-hidden="true">IV</span>
-            <h3 class="domain__title"><a href="prestations.html#penal">Droit pénal</a></h3>
-            <p>Assistance des personnes mises en cause ou des victimes, à chaque étape de la procédure.</p>
+            <span class="domain__num" aria-hidden="true">04</span>
+            <div class="domain__body">
+              <h3 class="domain__title"><a href="prestations.html#penal">Droit pénal</a></h3>
+              <p>Assistance des personnes mises en cause ou des victimes, à chaque étape de la procédure.</p>
+            </div>
+            <svg class="ico ico--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
           </li>
           <li class="domain">
-            <span class="domain__num" aria-hidden="true">V</span>
-            <h3 class="domain__title"><a href="prestations.html#travail">Droit du travail</a></h3>
-            <p>Conseil aux salariés comme aux employeurs sur la relation de travail et ses difficultés.</p>
+            <span class="domain__num" aria-hidden="true">05</span>
+            <div class="domain__body">
+              <h3 class="domain__title"><a href="prestations.html#travail">Droit du travail</a></h3>
+              <p>Conseil aux salariés comme aux employeurs sur la relation de travail et ses difficultés.</p>
+            </div>
+            <svg class="ico ico--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
           </li>
           <li class="domain">
-            <span class="domain__num" aria-hidden="true">VI</span>
-            <h3 class="domain__title"><a href="prestations.html#administratif">Droit administratif</a></h3>
-            <p>Assistance dans les relations avec l'administration et les collectivités.</p>
+            <span class="domain__num" aria-hidden="true">06</span>
+            <div class="domain__body">
+              <h3 class="domain__title"><a href="prestations.html#administratif">Droit administratif</a></h3>
+              <p>Assistance dans les relations avec l'administration et les collectivités.</p>
+            </div>
+            <svg class="ico ico--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
           </li>
       </ol>
       <p class="more"><a class="link-arrow" href="prestations.html">Voir le détail des prestations</a></p>
     </div>
   </section>
 
+  <section class="principle" aria-label="Principe d'exercice du cabinet">
+    <div class="wrap principle__inner">
+      <span class="principle__orn" aria-hidden="true"></span>
+      <p class="principle__text">Un exercice individuel : l'avocat que vous rencontrez au premier rendez-vous est celui qui suit votre dossier.</p>
+      <p class="principle__k">Principe d'exercice du cabinet</p>
+    </div>
+  </section>
+
   <section class="section section--stone" aria-labelledby="etapes-title">
     <div class="wrap">
       <header class="section__head">
-        <p class="eyebrow">Prendre rendez-vous</p>
+        <p class="eyebrow">Méthode</p>
         <h2 id="etapes-title">Comment se passe un premier contact</h2>
       </header>
       <ol class="steps">
-        <li><h3>Vous appelez ou vous écrivez</h3><p>Indiquez brièvement l'objet de votre demande. Inutile d'envoyer des pièces à ce stade.</p></li>
-        <li><h3>Un rendez-vous est fixé</h3><p>Le cabinet vous propose un créneau, au cabinet, en semaine.</p></li>
-        <li><h3>Un premier entretien</h3><p>Vous exposez votre situation ; les conditions d'intervention et d'honoraires vous sont présentées à cette occasion.</p></li>
+        <li><span class="steps__num" aria-hidden="true">I</span><h3>Vous appelez ou vous écrivez</h3><p>Indiquez brièvement l'objet de votre demande. Inutile d'envoyer des pièces à ce stade.</p></li>
+        <li><span class="steps__num" aria-hidden="true">II</span><h3>Un rendez-vous est fixé</h3><p>Le cabinet vous propose un créneau, au cabinet, du dimanche au jeudi.</p></li>
+        <li><span class="steps__num" aria-hidden="true">III</span><h3>Un premier entretien</h3><p>Vous exposez votre situation ; les conditions d'intervention et d'honoraires vous sont présentées à cette occasion.</p></li>
       </ol>
     </div>
   </section>
@@ -125,21 +171,36 @@
     <div class="wrap split">
       <div>
         <p class="eyebrow">Le cabinet</p>
-        <h2 id="cabinet-title">Un exercice individuel, sur rendez-vous</h2>
-        <p>Maître Démo reçoit au cabinet d'Alger-Centre, du dimanche au jeudi. Les entretiens se tiennent en français ou en arabe, et le secret professionnel s'applique dès le premier échange.</p>
+        <h2 id="cabinet-title">Discrétion, clarté, disponibilité sur rendez-vous</h2>
+        <p class="lead lead--dark">Maître Démo reçoit au cabinet d'Alger-Centre. Les entretiens se tiennent en français ou en arabe, et le secret professionnel s'applique dès le premier échange.</p>
         <p><a class="link-arrow" href="a-propos.html">Parcours et langues parlées</a></p>
       </div>
-      <aside class="note" aria-label="Note de démonstration">
+      <aside class="note" aria-label="Note">
         <p class="note__title">Note</p>
         <p>Textes à faire valider selon les règles de la profession. Ce qu'un cabinet peut annoncer ou afficher dépend des règles de son organisation professionnelle.</p>
       </aside>
     </div>
   </section>
+
+  <section class="cta" aria-labelledby="cta-t">
+    <div class="wrap cta__grid">
+      <div>
+        <p class="eyebrow eyebrow--light">Prendre rendez-vous</p>
+        <h2 id="cta-t">Un premier échange, par téléphone ou par e-mail</h2>
+        <p>Indiquez brièvement l'objet de votre demande ; le cabinet vous propose un rendez-vous. Ce site ne recueille aucune information : aucun formulaire, aucune pièce à transmettre en ligne.</p>
+      </div>
+      <div class="cta__contact">
+        <a class="cta__phone" href="tel:+21300000000" dir="ltr">+213 00 00 00 00</a>
+        <a class="cta__mail" href="mailto:contact@exemple.dz">contact@exemple.dz</a>
+        <p class="cta__hours">Dimanche – jeudi · sur rendez-vous</p>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="site-footer">
   <div class="wrap site-footer__grid">
-    <div>
-      <p class="site-footer__brand">Cabinet Maître Démo</p>
+    <div class="site-footer__id">
+      <a class="brand brand--light" href="index.html"><svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="45" height="45" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="5" y="5" width="38" height="38" fill="none" stroke="currentColor" stroke-width=".75"/><text x="24" y="31" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="600" fill="currentColor">MD</text></svg><span class="brand__text"><span class="brand__name">Cabinet Maître Démo</span><span class="brand__sub">Avocat · Alger</span></span></a>
       <p>Cabinet d'avocat fictif, créé pour illustrer un article. Aucune donnée n'est collectée par ce site.</p>
     </div>
     <div>
@@ -147,6 +208,7 @@
       <address>
         <p>12, rue de l'Exemple, 2<sup>e</sup> étage<br>Alger-Centre, wilaya d'Alger</p>
         <p><a href="tel:+21300000000" dir="ltr">+213 00 00 00 00</a><br><a href="mailto:contact@exemple.dz">contact@exemple.dz</a></p>
+        <p>Dimanche – jeudi, sur rendez-vous</p>
       </address>
     </div>
     <nav aria-label="Pages">

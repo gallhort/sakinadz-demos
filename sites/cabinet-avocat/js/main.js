@@ -10,7 +10,7 @@
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("menu");
   if (toggle && nav) {
-    var mq = window.matchMedia("(max-width: 52rem)");
+    var mq = window.matchMedia("(max-width: 60rem)");
 
     var setOpen = function (open) {
       toggle.setAttribute("aria-expanded", String(open));
