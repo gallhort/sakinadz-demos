@@ -179,6 +179,14 @@ address { font-style: normal; }
 .nav-toggle__bars::before { position: absolute; inset-block-start: -5px; }
 .nav-toggle__bars::after { position: absolute; inset-block-start: 5px; }
 
+@media (max-width: 30rem) {
+  .site-header__inner { gap: 0.75rem; }
+  .brand { gap: 0.6rem; }
+  .brand__mark { inline-size: 2.25rem; block-size: 2.25rem; }
+  .brand__name { font-size: 1.2rem; }
+  .nav-toggle { padding-inline: 0.7rem; }
+}
+
 @media (max-width: 52rem) {
   .js .nav-toggle { display: inline-flex; }
   .js .site-nav {
@@ -514,8 +522,7 @@ address { font-style: normal; }
 }
 .hours th { font-weight: 600; color: var(--navy); padding-inline-end: 1rem; white-space: nowrap; }
 .hours td { color: var(--muted); }
-.hours td[dir="ltr"] { text-align: end; }
-:lang(ar) .hours td[dir="ltr"] { text-align: start; }
+[dir="rtl"] .hours td { text-align: right; }
 .hours tr.is-today th, .hours tr.is-today td { color: var(--bordeaux); }
 .hours tr.is-today th::after {
   content: attr(data-today);
