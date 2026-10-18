@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Pupitre maintenance – calculateur du coût annuel d'un site</title>
+  <meta name="description" content="Démonstration : estimez le coût annuel de maintenance d'un site (statique ou CMS) à partir des fourchettes relevées dans l'article, et comparez-le sur trois ans au prix de création.">
+  <meta name="theme-color" content="#1f4eb4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f4eb4'/%3E%3Crect x='7' y='7' width='3' height='18' rx='1.5' fill='%23cfe0ff'/%3E%3Crect x='14.5' y='7' width='3' height='18' rx='1.5' fill='%23cfe0ff'/%3E%3Crect x='22' y='7' width='3' height='18' rx='1.5' fill='%23cfe0ff'/%3E%3Crect x='5' y='17' width='7' height='4' rx='1' fill='%237ee2a8'/%3E%3Crect x='12.5' y='10' width='7' height='4' rx='1' fill='%237ee2a8'/%3E%3Crect x='20' y='14' width='7' height='4' rx='1' fill='%237ee2a8'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#pupitre">Aller directement au calculateur</a>
+
+  <div class="demo-banner" role="note">Site de démonstration – contenu fictif</div>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Pupitre maintenance, haut de page">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <rect width="40" height="40" rx="9" fill="currentColor"/>
+          <rect x="9" y="8" width="3" height="24" rx="1.5" fill="#cfe0ff"/>
+          <rect x="18.5" y="8" width="3" height="24" rx="1.5" fill="#cfe0ff"/>
+          <rect x="28" y="8" width="3" height="24" rx="1.5" fill="#cfe0ff"/>
+          <rect x="6" y="21" width="9" height="5" rx="1.2" fill="#7ee2a8"/>
+          <rect x="15.5" y="12" width="9" height="5" rx="1.2" fill="#7ee2a8"/>
+          <rect x="25" y="16" width="9" height="5" rx="1.2" fill="#7ee2a8"/>
+        </svg>
+        <span class="brand__name">Pupitre<b>maintenance</b></span>
+      </a>
+      <nav class="topbar__contact" aria-label="Nous joindre">
+        <a href="tel:+213000000000"><span class="mono">+213 00 00 00 00</span></a>
+        <a href="https://wa.me/213000000000" rel="noopener">WhatsApp</a>
+        <a href="mailto:contact@exemple.dz">contact@exemple.dz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HÉROS ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="kicker"><span class="kicker__dot" aria-hidden="true"></span>Outil · coût annuel de maintenance d'un site</p>
+          <h1 id="hero-title" class="hero__title">
+            <span class="hero__line">Réglez vos besoins.</span>
+            <span class="hero__line hero__line--blue">Lisez la fourchette.</span>
+          </h1>
+          <p class="hero__lead">Technologie, types de maintenance, volume de demandes, délai de traitement&nbsp;: poussez les commandes du pupitre. Le calculateur affiche la fourchette publiée qui correspond à votre cas, puis la confronte au prix de création de votre site sur trois ans.</p>
+          <p class="hero__note"><strong>Il n'invente aucun prix.</strong> Tous les montants sont en équivalent euros&nbsp;: fourchettes relevées dans l'article, à titre indicatif. Quand l'article ne chiffre pas une combinaison, l'outil vous le dit.</p>
+          <a class="btn btn--primary" href="#pupitre">Ouvrir le pupitre <span aria-hidden="true">↓</span></a>
+        </div>
+        <aside class="hero__stat" aria-label="Le constat de l'article">
+          <p class="hero__big mono" aria-hidden="true"><span>3</span><small>ans</small></p>
+          <p class="hero__claim">Sur trois ans, les montants de maintenance relevés <em>peuvent dépasser le prix de création du site.</em></p>
+          <p class="hero__src">D'après l'article «&nbsp;Combien coûte la maintenance d'un site web&nbsp;»</p>
+          <svg class="hero__rails" viewBox="0 0 300 120" aria-hidden="true" focusable="false">
+            <g stroke="currentColor" stroke-width="2" opacity=".35"><line x1="10" y1="20" x2="290" y2="20"/><line x1="10" y1="60" x2="290" y2="60"/><line x1="10" y1="100" x2="290" y2="100"/></g>
+            <g class="hero__caps"><rect class="cap cap--1" x="40" y="10" width="34" height="20" rx="4"/><rect class="cap cap--2" x="170" y="50" width="34" height="20" rx="4"/><rect class="cap cap--3" x="230" y="90" width="34" height="20" rx="4"/></g>
+          </svg>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ PUPITRE ============ -->
+    <section id="pupitre" class="console-section" aria-labelledby="console-title" tabindex="-1">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-num mono" aria-hidden="true">01</p>
+          <h2 id="console-title">Le pupitre</h2>
+          <p class="section-intro">Chaque réglage modifie la lecture en direct. Vos réglages restent dans ce navigateur, rien n'est envoyé.</p>
+        </div>
+
+        <noscript><p class="noscript">Le calculateur a besoin de JavaScript. Sans lui, vous pouvez consulter plus bas toutes les fourchettes relevées dans l'article.</p></noscript>
+
+        <form class="console" id="console" novalidate aria-describedby="console-help">
+          <p id="console-help" class="sr-only">Formulaire de démonstration : aucune donnée n'est envoyée. Le résultat se met à jour automatiquement.</p>
+          <span class="screw screw--tl" aria-hidden="true"></span><span class="screw screw--tr" aria-hidden="true"></span><span class="screw screw--bl" aria-hidden="true"></span><span class="screw screw--br" aria-hidden="true"></span>
+
+          <!-- Écran de lecture -->
+          <div class="readout" id="readout">
+            <div class="readout__top">
+              <span class="mono readout__label">Lecture · coût par an</span>
+              <span class="mono readout__market" id="ro-market">Marché : Algérie</span>
+            </div>
+            <div class="readout__value" id="ro-value" aria-hidden="true">
+              <div class="ro-row" id="row-min"><span class="ro-row__k mono" id="row-min-k">de</span><span class="odo" id="odo-min"></span><span class="ro-row__u">€</span></div>
+              <div class="ro-row" id="row-max"><span class="ro-row__k mono">à</span><span class="odo" id="odo-max"></span><span class="ro-row__u">€</span></div>
+            </div>
+            <p class="readout__nodata" id="ro-nodata" hidden></p>
+            <p class="readout__sub" id="ro-sub"></p>
+            <p class="sr-only" aria-live="polite" id="ro-live"></p>
+
+            <div class="trend" id="trend">
+              <p class="mono trend__label">Position probable dans la fourchette</p>
+              <div class="trend__track" aria-hidden="true">
+                <span>bas</span><span>milieu</span><span>haut</span>
+                <i class="trend__cursor" id="trend-cursor"></i>
+              </div>
+              <p class="trend__text" id="trend-text"></p>
+            </div>
+
+            <ul class="leds" aria-label="Voyants d'état">
+              <li class="led" id="led-tech"><i aria-hidden="true"></i><span class="led__name">Maintenance technique</span><span class="led__state"></span></li>
+              <li class="led" id="led-src"><i aria-hidden="true"></i><span class="led__name">Fourchette publiée</span><span class="led__state"></span></li>
+              <li class="led" id="led-evo"><i aria-hidden="true"></i><span class="led__name">Évolution</span><span class="led__state"></span></li>
+              <li class="led" id="led-frame"><i aria-hidden="true"></i><span class="led__name">Plafond et délai</span><span class="led__state"></span></li>
+            </ul>
+            <p class="readout__disclaimer">Fourchettes relevées dans l'article, à titre indicatif. Équivalent euros&nbsp;; HT quand l'article le précise.</p>
+          </div>
+
+          <!-- Commandes -->
+          <div class="controls">
+            <fieldset class="block block--keys">
+              <legend class="block__legend"><span class="mono">A</span> Technologie du site</legend>
+              <div class="keys">
+                <label class="key">
+                  <input type="radio" name="tech" value="static">
+                  <span class="key__face"><span class="key__led" aria-hidden="true"></span><span class="key__title">Site statique</span><span class="key__desc">Pages fixes, sans interface d'administration</span></span>
+                </label>
+                <label class="key">
+                  <input type="radio" name="tech" value="cms" checked>
+                  <span class="key__face"><span class="key__led" aria-hidden="true"></span><span class="key__title">CMS</span><span class="key__desc">WordPress ou autre système de gestion de contenu</span></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="block block--keys block--market">
+              <legend class="block__legend"><span class="mono">B</span> Tarifs de référence</legend>
+              <div class="keys keys--small">
+                <label class="key">
+                  <input type="radio" name="market" value="dz" checked>
+                  <span class="key__face"><span class="key__led" aria-hidden="true"></span><span class="key__title">Algérie</span><span class="key__desc">Prix relevés en Algérie</span></span>
+                </label>
+                <label class="key">
+                  <input type="radio" name="market" value="fr">
+                  <span class="key__face"><span class="key__led" aria-hidden="true"></span><span class="key__title">France</span><span class="key__desc">Prix relevés en France</span></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="block block--channels">
+              <legend class="block__legend"><span class="mono">C</span> Ce que vous voulez inclure <span class="block__hint">plusieurs choix possibles</span></legend>
+              <div class="channels">
+                <label class="channel">
+                  <input type="checkbox" name="need" value="technique" checked>
+                  <span class="channel__body">
+                    <span class="channel__head"><span class="mono">CH 1</span><span class="channel__led" aria-hidden="true"></span></span>
+                    <span class="channel__title">Technique</span>
+                    <span class="channel__desc">Mises à jour, failles, sauvegardes.</span>
+                    <span class="channel__btn" aria-hidden="true"><span class="on">Activé</span><span class="off">Coupé</span></span>
+                  </span>
+                </label>
+                <label class="channel">
+                  <input type="checkbox" name="need" value="editoriale">
+                  <span class="channel__body">
+                    <span class="channel__head"><span class="mono">CH 2</span><span class="channel__led" aria-hidden="true"></span></span>
+                    <span class="channel__title">Éditoriale</span>
+                    <span class="channel__desc">Prix, horaires, photos, coquilles.</span>
+                    <span class="channel__btn" aria-hidden="true"><span class="on">Activé</span><span class="off">Coupé</span></span>
+                  </span>
+                </label>
+                <label class="channel">
+                  <input type="checkbox" name="need" value="seo">
+                  <span class="channel__body">
+                    <span class="channel__head"><span class="mono">CH 3</span><span class="channel__led" aria-hidden="true"></span></span>
+                    <span class="channel__title">Référencement</span>
+                    <span class="channel__desc">Contenu inclus en plus de la maintenance.</span>
+                    <span class="channel__btn" aria-hidden="true"><span class="on">Activé</span><span class="off">Coupé</span></span>
+                  </span>
+                </label>
+                <label class="channel channel--apart">
+                  <input type="checkbox" name="need" value="evolution">
+                  <span class="channel__body">
+                    <span class="channel__head"><span class="mono">HORS FORFAIT</span><span class="channel__led" aria-hidden="true"></span></span>
+                    <span class="channel__title">Évolution</span>
+                    <span class="channel__desc">Pages, langues, fonctionnalités&nbsp;: du développement, facturé à part.</span>
+                    <span class="channel__btn" aria-hidden="true"><span class="on">Activé</span><span class="off">Coupé</span></span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="block block--faders">
+              <div class="fader">
+                <label class="block__legend" for="volume"><span class="mono">D</span> Volume de demandes</label>
+                <div class="fader__rail">
+                  <input type="range" id="volume" name="volume" min="0" max="2" step="1" value="1" aria-describedby="volume-desc">
+                  <div class="fader__ticks" aria-hidden="true"><span>Rares</span><span>Régulières</span><span>Fréquentes</span></div>
+                </div>
+                <p class="fader__desc" id="volume-desc"></p>
+              </div>
+              <div class="fader">
+                <label class="block__legend" for="delai"><span class="mono">E</span> Délai de traitement</label>
+                <div class="fader__rail">
+                  <input type="range" id="delai" name="delai" min="0" max="2" step="1" value="1" aria-describedby="delai-desc">
+                  <div class="fader__ticks" aria-hidden="true"><span>Souple</span><span>Défini</span><span>Prioritaire</span></div>
+                </div>
+                <p class="fader__desc" id="delai-desc"></p>
+              </div>
+            </div>
+
+            <div class="console__actions">
+              <button type="button" class="btn btn--ghost" id="reset">Remettre à zéro</button>
+              <button type="button" class="btn btn--link" id="forget">Effacer mes réglages enregistrés</button>
+              <p class="console__status" id="console-status" aria-live="polite"></p>
+            </div>
+          </div>
+        </form>
+
+        <!-- Explication du résultat -->
+        <div class="why" id="why" aria-labelledby="why-title">
+          <div class="why__col">
+            <h3 id="why-title">D'où vient ce chiffre</h3>
+            <ul class="why__bases" id="why-bases"></ul>
+            <p class="why__method">Méthode&nbsp;: l'outil choisit la ou les fourchettes de l'article les plus proches de vos réglages et les ramène à l'année (montant mensuel × 12). Ce rapprochement est une aide à la lecture, à valider avec votre prestataire. Le volume et le délai ne modifient pas les montants (l'article ne les chiffre pas)&nbsp;: ils indiquent seulement où vous vous situez probablement dans la fourchette.</p>
+          </div>
+          <div class="why__col why__col--notes">
+            <h3>À noter pour votre cas</h3>
+            <ul class="why__notes" id="why-notes"></ul>
+            <h3 class="why__recap-title">Vos réglages</h3>
+            <dl class="why__recap" id="why-recap"></dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TROIS ANS ============ -->
+    <section class="years" id="trois-ans" aria-labelledby="years-title">
+      <div class="wrap">
+        <div class="section-head section-head--light">
+          <p class="section-num mono" aria-hidden="true">02</p>
+          <h2 id="years-title">Trois ans de maintenance <span>face au prix de création</span></h2>
+          <p class="section-intro">Saisissez ce que vous a coûté (ou va coûter) la création de votre site, en euros. La maintenance annuelle lue sur le pupitre est multipliée par trois.</p>
+        </div>
+
+        <div class="years__grid">
+          <div class="years__input">
+            <label for="creation" class="years__label">Prix de création du site</label>
+            <div class="money">
+              <input type="text" id="creation" name="creation" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="ex. 1 500" aria-describedby="creation-msg creation-help">
+              <span class="money__unit mono" aria-hidden="true">€</span>
+            </div>
+            <p class="years__help" id="creation-help">Chiffres uniquement, espaces et virgule acceptés (ex. 1 250,50). Démonstration&nbsp;: aucune donnée n'est envoyée.</p>
+            <p class="years__msg" id="creation-msg" aria-live="polite"></p>
+
+            <fieldset class="hyp" id="hyp">
+              <legend>Anneau de répartition&nbsp;: hypothèse</legend>
+              <label><input type="radio" name="hyp" value="low"> <span>Bas de fourchette</span></label>
+              <label><input type="radio" name="hyp" value="high" checked> <span>Haut de fourchette</span></label>
+            </fieldset>
+          </div>
+
+          <div class="years__bars" id="bars" role="img" aria-labelledby="bars-title bars-desc">
+            <p class="sr-only" id="bars-title">Comparaison en barres</p>
+            <p class="sr-only" id="bars-desc"></p>
+            <div class="bar bar--creation" id="bar-creation"><div class="bar__fill"></div><p class="bar__value mono"></p><p class="bar__label">Création</p></div>
+            <div class="bar bar--low" id="bar-low"><div class="bar__fill"></div><p class="bar__value mono"></p><p class="bar__label">Maintenance 3&nbsp;ans, bas</p></div>
+            <div class="bar bar--high" id="bar-high"><div class="bar__fill"></div><p class="bar__value mono"></p><p class="bar__label">Maintenance 3&nbsp;ans, haut</p></div>
+          </div>
+
+          <div class="years__ring">
+            <svg viewBox="0 0 200 200" class="ring" id="ring" role="img" aria-labelledby="ring-desc">
+              <desc id="ring-desc">Répartition du coût total sur trois ans entre création et maintenance.</desc>
+              <circle class="ring__track" cx="100" cy="100" r="78"/>
+              <circle class="ring__creation" id="ring-creation" cx="100" cy="100" r="78" pathLength="1000"/>
+              <circle class="ring__maint" id="ring-maint" cx="100" cy="100" r="78" pathLength="1000"/>
+              <g class="ring__ticks" aria-hidden="true"></g>
+              <text x="100" y="98" class="ring__pct mono" id="ring-pct" text-anchor="middle">–</text>
+              <text x="100" y="122" class="ring__cap" text-anchor="middle">maintenance</text>
+            </svg>
+            <ul class="ring__legend">
+              <li><i class="sw sw--creation" aria-hidden="true"></i>Création <span class="mono" id="lg-creation">–</span></li>
+              <li><i class="sw sw--maint" aria-hidden="true"></i>Maintenance 3 ans <span class="mono" id="lg-maint">–</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="years__verdict" id="verdict" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ============ TROIS TYPES ============ -->
+    <section class="types" id="types" aria-labelledby="types-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-num mono" aria-hidden="true">03</p>
+          <h2 id="types-title">Ce que contient vraiment une maintenance</h2>
+          <p class="section-intro">L'article distingue trois types de maintenance. Les deux premiers relèvent d'un forfait&nbsp;; le troisième est du développement.</p>
+        </div>
+        <ol class="types__list">
+          <li class="type reveal">
+            <span class="type__num mono" aria-hidden="true">01</span>
+            <div>
+              <h3>Technique</h3>
+              <p>Mises à jour, correction des failles, sauvegardes. <strong>Indispensable pour WordPress ou tout CMS</strong>, très réduite pour un site statique.</p>
+            </div>
+          </li>
+          <li class="type reveal">
+            <span class="type__num mono" aria-hidden="true">02</span>
+            <div>
+              <h3>Éditoriale</h3>
+              <p>Modifier un prix, des horaires, des photos, corriger des coquilles. Utile dès que les informations de votre site changent souvent.</p>
+            </div>
+          </li>
+          <li class="type type--apart reveal">
+            <span class="type__num mono" aria-hidden="true">03</span>
+            <div>
+              <p class="type__flag mono">Facturé à part</p>
+              <h3>Évolution</h3>
+              <p>Ajout de pages, de langues, de fonctionnalités. <strong>C'est du développement, facturé à part</strong>&nbsp;: il ne devrait pas se cacher dans un forfait de maintenance.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FORMULES ============ -->
+    <section class="formulas" id="formules" aria-labelledby="formulas-title">
+      <h2 id="formulas-title" class="sr-only">Formules à éviter et formule saine</h2>
+      <div class="formulas__grid">
+        <div class="formula formula--avoid">
+          <p class="section-num mono" aria-hidden="true">04</p>
+          <h3>Formules à éviter</h3>
+          <ul class="switches">
+            <li><span class="switch switch--off" aria-hidden="true"></span><span>Une maintenance <strong>sans liste précise</strong> de prestations.</span></li>
+            <li><span class="switch switch--off" aria-hidden="true"></span><span>Un <strong>abonnement obligatoire</strong> pour que le site reste en ligne.</span></li>
+            <li><span class="switch switch--off" aria-hidden="true"></span><span>Un <strong>engagement long sans sortie</strong>.</span></li>
+            <li><span class="switch switch--off" aria-hidden="true"></span><span>Un forfait <strong>«&nbsp;illimité&nbsp;»</strong>.</span></li>
+          </ul>
+        </div>
+        <div class="formula formula--good">
+          <p class="section-num mono" aria-hidden="true">05</p>
+          <h3>La formule saine</h3>
+          <ul class="switches">
+            <li><span class="switch switch--on" aria-hidden="true"></span><span>Une <strong>liste fermée</strong> de prestations.</span></li>
+            <li><span class="switch switch--on" aria-hidden="true"></span><span>Un <strong>plafond de demandes</strong> mensuelles.</span></li>
+            <li><span class="switch switch--on" aria-hidden="true"></span><span>Un <strong>délai de traitement</strong> défini.</span></li>
+            <li><span class="switch switch--on" aria-hidden="true"></span><span>Une <strong>sortie sans conséquence</strong> pour le client.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAUT-IL ============ -->
+    <section class="need" aria-labelledby="need-title">
+      <div class="wrap need__grid">
+        <div class="section-head">
+          <p class="section-num mono" aria-hidden="true">06</p>
+          <h2 id="need-title">Faut-il vraiment une maintenance&nbsp;?</h2>
+        </div>
+        <ul class="need__list">
+          <li><span class="need__tag need__tag--yes mono">Oui</span><p>Pour un site <strong>WordPress ou tout autre CMS</strong>.</p></li>
+          <li><span class="need__tag need__tag--maybe mono">Pas forcément</span><p>Pour un <strong>site statique qui change peu</strong>.</p></li>
+          <li><span class="need__tag need__tag--yes mono">Utile</span><p>Pour un site dont <strong>les informations changent souvent</strong>, ou qui <strong>sert à vendre</strong>.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TABLE DES FOURCHETTES ============ -->
+    <section class="sources" id="fourchettes" aria-labelledby="sources-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-num mono" aria-hidden="true">07</p>
+          <h2 id="sources-title">Toutes les fourchettes de l'article</h2>
+          <p class="section-intro">Équivalent euros, fourchettes relevées dans l'article, à titre indicatif. Ce sont les seuls montants utilisés par le calculateur.</p>
+        </div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Tableau des fourchettes, défilable">
+          <table class="ptable">
+            <thead><tr><th scope="col">Formule relevée</th><th scope="col">Marché</th><th scope="col">Montant publié</th><th scope="col">Ramené à l'année</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Forfaits annuels simples</th><td>Algérie</td><td class="mono">65 à 330 € / an</td><td class="mono">65 à 330 €</td></tr>
+              <tr><th scope="row">Pack maintenance d'agence</th><td>Algérie</td><td class="mono">≈ 65 € / mois</td><td class="mono">≈ 780 €</td></tr>
+              <tr><th scope="row">Pack maintenance et référencement</th><td>Algérie</td><td class="mono">≈ 230 € / mois</td><td class="mono">≈ 2 760 €</td></tr>
+              <tr><th scope="row">Forfait basique, site vitrine</th><td>France</td><td class="mono">80 à 250 € / mois</td><td class="mono">960 à 3 000 €</td></tr>
+              <tr><th scope="row">Maintenance corrective seule</th><td>France</td><td class="mono">50 à 90 € HT / mois</td><td class="mono">600 à 1 080 € HT</td></tr>
+              <tr><th scope="row">Maintenance évolutive</th><td>France</td><td class="mono">150 à 300 € HT / mois</td><td class="mono">1 800 à 3 600 € HT</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="sources__foot">Facteurs de variation cités par l'article&nbsp;: la technologie, le volume de demandes, le délai de traitement, le contenu inclus. L'article se termine par la présentation d'une offre de maintenance d'agence à 20&nbsp;€ par mois, non utilisée dans le calcul.</p>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="wrap cta__grid">
+        <div>
+          <h2 id="cta-title">Votre devis tient-il la route&nbsp;?</h2>
+          <p>L'article détaille les prix, le contenu réel d'une maintenance et les clauses à surveiller. Lisez-le avant de signer, ou posez-nous la question.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--light" href="https://www.sakinadz.com/blog/services/cout-maintenance-site-web-algerie">Lire l'article complet <span aria-hidden="true">→</span></a>
+          <ul class="cta__contacts">
+            <li><a href="tel:+213000000000">Téléphone <span class="mono">+213 00 00 00 00</span></a></li>
+            <li><a href="https://wa.me/213000000000" rel="noopener">WhatsApp <span class="mono">+213 00 00 00 00</span></a></li>
+            <li><a href="mailto:contact@exemple.dz">E-mail <span class="mono">contact@exemple.dz</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p><strong>Mentions&nbsp;:</strong> site de démonstration au contenu fictif, sans entreprise réelle derrière. Aucun cookie, aucune mesure d'audience, aucune donnée envoyée&nbsp;: vos réglages restent dans votre navigateur (bouton «&nbsp;Effacer mes réglages enregistrés&nbsp;»). Montants indicatifs issus de l'article.</p>
+      <p class="footer__print">Article&nbsp;: https://www.sakinadz.com/blog/services/cout-maintenance-site-web-algerie</p>
+      <button type="button" class="btn btn--ghost btn--small" id="print">Imprimer mon estimation</button>
+    </div>
+  </footer>
+
+  <div class="minibar" id="minibar" aria-hidden="true">
+    <span class="mono minibar__label">Estimation</span>
+    <span class="mono minibar__value" id="minibar-value">–</span>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
