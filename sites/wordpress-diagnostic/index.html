@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>WordPress lent : le diagnostic</title>
+  <meta name="description" content="Outil de démonstration : saisissez votre LCP, votre INP et votre CLS, puis répondez à 8 questions pour savoir s'il vaut mieux optimiser ou refaire votre site WordPress.">
+  <meta name="theme-color" content="#22262b">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='17' r='13' fill='%2322262b'/%3E%3Crect x='13' y='1' width='6' height='4' fill='%23e8590c'/%3E%3Cpath d='M16 17 L23 9' stroke='%23e8590c' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#outil">Aller directement à l'outil</a>
+
+  <div class="demo-banner" role="note">Site de démonstration – contenu fictif</div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Banc d'essai WordPress, accueil">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <circle cx="20" cy="22" r="16" fill="none" stroke="currentColor" stroke-width="3"/>
+        <rect x="16" y="1" width="8" height="5" fill="currentColor"/>
+        <path d="M20 22 L29 12" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="20" cy="22" r="3" fill="currentColor"/>
+      </svg>
+      <span class="brand__name">Banc d'essai <b>WP</b></span>
+    </a>
+    <nav class="topbar__contact" aria-label="Contact">
+      <a href="tel:+213000000000">+213 00 00 00 00</a>
+      <a href="https://wa.me/213000000000" rel="noopener">WhatsApp</a>
+      <a href="mailto:contact@exemple.dz">contact@exemple.dz</a>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <!-- ===================== HÉROS ===================== -->
+    <section class="hero" aria-labelledby="hero-titre">
+      <div class="hero__text">
+        <p class="kicker">Diagnostic en deux volets · 3 mesures · 8 questions</p>
+        <h1 id="hero-titre" class="hero__title">
+          <span class="hero__l1">WordPress</span>
+          <span class="hero__l2">lent<span class="hero__q"> ?</span></span>
+        </h1>
+        <p class="hero__sub">Optimiser ou refaire&nbsp;: lisez vos cadrans avant de décider.</p>
+        <p class="hero__lead">Un WordPress lent n'est pas une fatalité. Ses causes sont généralement identifiables, et le choix entre optimisation et refonte dépend de ce qui ralentit réellement le site. Saisissez vos trois Core Web Vitals, puis répondez à huit questions&nbsp;: vous repartez avec un verdict et un plan d'action.</p>
+        <a class="btn btn--orange" href="#outil">Démarrer le diagnostic</a>
+      </div>
+
+      <figure class="chrono" aria-labelledby="chrono-legende">
+        <div class="chrono__frame">
+          <svg class="chrono__svg" viewBox="0 0 320 360" role="img" aria-labelledby="chrono-titre chrono-desc">
+            <title id="chrono-titre">Chronomètre d'exemple : avant et après optimisation</title>
+            <desc id="chrono-desc">Illustration non mesurée. L'aiguille « avant » s'arrête bien au-delà du repère de 2,5 secondes ; l'aiguille « après » s'arrête sous ce repère.</desc>
+            <g class="chrono__body">
+              <rect x="142" y="6" width="36" height="20" rx="3" class="chrono__crown"/>
+              <rect x="150" y="24" width="20" height="18" class="chrono__crown"/>
+              <rect x="40" y="34" width="22" height="14" rx="3" transform="rotate(-40 51 41)" class="chrono__crown"/>
+              <circle cx="160" cy="200" r="150" class="chrono__case"/>
+              <circle cx="160" cy="200" r="134" class="chrono__face"/>
+              <path id="chrono-good" class="chrono__good" d=""/>
+              <g id="chrono-ticks"></g>
+              <text x="160" y="252" class="chrono__label" text-anchor="middle">EXEMPLE</text>
+              <text x="160" y="269" class="chrono__label chrono__label--small" text-anchor="middle">non mesuré</text>
+            </g>
+            <g id="hand-before" class="chrono__hand chrono__hand--before" transform="rotate(252 160 200)">
+              <path d="M160 214 L156 200 L160 82 L164 200 Z"/>
+            </g>
+            <g id="hand-after" class="chrono__hand chrono__hand--after" transform="rotate(72 160 200)">
+              <path d="M160 222 L155 200 L160 74 L165 200 Z"/>
+            </g>
+            <circle cx="160" cy="200" r="9" class="chrono__hub"/>
+            <circle cx="160" cy="200" r="3" class="chrono__hub-dot"/>
+          </svg>
+        </div>
+        <figcaption id="chrono-legende" class="chrono__caption">
+          <span class="lap lap--before"><b>Avant</b> au-delà du repère</span>
+          <span class="lap lap--after"><b>Après</b> sous les 2,5&nbsp;s</span>
+          <span class="chrono__note">Illustration&nbsp;: exemple, non mesuré.</span>
+          <button type="button" class="btn btn--ghost btn--small" id="chrono-replay" hidden>Rejouer l'exemple</button>
+        </figcaption>
+      </figure>
+
+      <div class="ruler" aria-hidden="true">
+        <div class="ruler__track"></div>
+        <span class="ruler__mark">2,5&nbsp;s</span>
+      </div>
+    </section>
+
+    <!-- ===================== OUTIL ===================== -->
+    <section id="outil" class="tool" aria-labelledby="outil-titre" tabindex="-1">
+      <div class="tool__head">
+        <h2 id="outil-titre" class="section-title"><span class="section-title__num">01–02</span> Le diagnostic</h2>
+        <p class="tool__intro">Deux volets indépendants. Vos réponses restent dans votre navigateur&nbsp;: rien n'est envoyé.</p>
+      </div>
+
+      <noscript>
+        <p class="noscript">Cet outil a besoin de JavaScript pour lire vos mesures et calculer le verdict. Les seuils de référence&nbsp;: LCP 2,5&nbsp;s ou moins, INP 200&nbsp;ms ou moins, CLS 0,1 ou moins.</p>
+      </noscript>
+
+      <div class="tabs" role="tablist" aria-label="Volets du diagnostic">
+        <button class="tab" role="tab" id="tab-mesures" aria-controls="panel-mesures" aria-selected="true" tabindex="0">
+          <span class="tab__num">01</span><span class="tab__label">Mes mesures</span><span class="tab__led" aria-hidden="true"></span>
+        </button>
+        <button class="tab" role="tab" id="tab-verdict" aria-controls="panel-verdict" aria-selected="false" tabindex="-1">
+          <span class="tab__num">02</span><span class="tab__label">Optimiser ou refaire&nbsp;?</span><span class="tab__led" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- ---------- Onglet 1 : mesures ---------- -->
+      <div class="panel" role="tabpanel" id="panel-mesures" aria-labelledby="tab-mesures" tabindex="0">
+        <div class="dash rivets">
+          <div class="dash__head">
+            <h3 class="dash__title">Tableau de bord<span> · Core Web Vitals</span></h3>
+            <p class="dash__how">Ouvrez PageSpeed Insights, testez votre page d'accueil en <strong>version mobile</strong>, puis recopiez les trois valeurs ci-dessous. Les cadrans réagissent pendant la saisie.</p>
+          </div>
+
+          <form class="gauges" id="form-mesures" novalidate>
+            <div class="gauge" data-metric="lcp">
+              <div class="gauge__dial" id="dial-lcp"></div>
+              <div class="gauge__body">
+                <label class="gauge__label" for="in-lcp"><span class="gauge__code">LCP</span> <span class="gauge__name">chargement</span></label>
+                <p class="gauge__hint" id="hint-lcp">En secondes, par ex. <kbd>2,8</kbd>. Une valeur de 100 ou plus sans unité est lue en millisecondes.</p>
+                <div class="lcd">
+                  <input class="lcd__input" id="in-lcp" name="lcp" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="hint-lcp msg-lcp" placeholder="—">
+                  <span class="lcd__unit" aria-hidden="true">s</span>
+                </div>
+                <div class="gauge__msg" id="msg-lcp" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="gauge" data-metric="inp">
+              <div class="gauge__dial" id="dial-inp"></div>
+              <div class="gauge__body">
+                <label class="gauge__label" for="in-inp"><span class="gauge__code">INP</span> <span class="gauge__name">réactivité</span></label>
+                <p class="gauge__hint" id="hint-inp">En millisecondes, par ex. <kbd>240</kbd>. Vous pouvez aussi écrire <kbd>0,24 s</kbd>.</p>
+                <div class="lcd">
+                  <input class="lcd__input" id="in-inp" name="inp" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="hint-inp msg-inp" placeholder="—">
+                  <span class="lcd__unit" aria-hidden="true">ms</span>
+                </div>
+                <div class="gauge__msg" id="msg-inp" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="gauge" data-metric="cls">
+              <div class="gauge__dial" id="dial-cls"></div>
+              <div class="gauge__body">
+                <label class="gauge__label" for="in-cls"><span class="gauge__code">CLS</span> <span class="gauge__name">stabilité visuelle</span></label>
+                <p class="gauge__hint" id="hint-cls">Sans unité, par ex. <kbd>0,08</kbd>.</p>
+                <div class="lcd">
+                  <input class="lcd__input" id="in-cls" name="cls" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="hint-cls msg-cls" placeholder="—">
+                  <span class="lcd__unit" aria-hidden="true">&nbsp;</span>
+                </div>
+                <div class="gauge__msg" id="msg-cls" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="dash__actions">
+              <button type="submit" class="btn btn--orange">Lire les cadrans</button>
+              <button type="button" class="btn btn--ghost-dark" id="mesures-exemple">Charger un exemple</button>
+              <button type="reset" class="btn btn--ghost-dark" id="mesures-reset">Effacer les mesures</button>
+            </div>
+          </form>
+
+          <div class="readout" id="readout" aria-live="polite" tabindex="-1"></div>
+
+          <details class="scale-note">
+            <summary>Comment les couleurs sont-elles attribuées&nbsp;?</summary>
+            <p><strong>Vert</strong>&nbsp;: la valeur respecte le seuil de l'article (LCP 2,5&nbsp;s ou moins, INP 200&nbsp;ms ou moins, CLS 0,1 ou moins).</p>
+            <p><strong>Orange</strong> puis <strong>rouge</strong>&nbsp;: l'article ne donne que le seuil du « bon » résultat. Pour séparer l'orange du rouge, l'outil applique une convention&nbsp;: jusqu'au double du seuil, la valeur est orange&nbsp;; au-delà, elle est rouge (soit 5&nbsp;s pour le LCP, 400&nbsp;ms pour l'INP, 0,2 pour le CLS). <em>Limite orange/rouge à valider.</em></p>
+          </details>
+          <p class="print-only">Couleurs : vert = seuil de l'article respecté (LCP 2,5 s ou moins, INP 200 ms ou moins, CLS 0,1 ou moins). Limite orange/rouge fixée par convention au double du seuil, à valider.</p>
+        </div>
+      </div>
+
+      <!-- ---------- Onglet 2 : verdict ---------- -->
+      <div class="panel" role="tabpanel" id="panel-verdict" aria-labelledby="tab-verdict" tabindex="0" hidden>
+        <div class="quiz" id="quiz">
+          <div class="quiz__rail" aria-hidden="true">
+            <ol class="quiz__lamps" id="quiz-lamps"></ol>
+          </div>
+          <form class="quiz__card rivets" id="quiz-form" novalidate>
+            <p class="quiz__count" id="quiz-count" aria-live="polite"></p>
+            <div id="quiz-question"></div>
+            <p class="quiz__error" id="quiz-error" aria-live="assertive"></p>
+            <div class="quiz__nav">
+              <button type="button" class="btn btn--ghost-dark" id="quiz-prev">Précédent</button>
+              <button type="submit" class="btn btn--orange" id="quiz-next">Suivant</button>
+            </div>
+            <button type="button" class="linkbtn" id="quiz-reset">Tout recommencer</button>
+          </form>
+        </div>
+
+        <div class="verdict" id="verdict" hidden tabindex="-1" aria-labelledby="verdict-title"></div>
+      </div>
+    </section>
+
+    <!-- ===================== ARTICLE ===================== -->
+    <section class="cta-band" aria-labelledby="cta-titre">
+      <div class="cta-band__inner">
+        <h2 id="cta-titre" class="cta-band__title">Lire le diagnostic<br>en entier</h2>
+        <div class="cta-band__text">
+          <p>Causes, outils de mesure, optimisations possibles sans refonte et précautions de référencement&nbsp;: tout est détaillé dans l'article.</p>
+          <a class="btn btn--dark" href="https://www.sakinadz.com/blog/services/wordpress-lent-optimiser-ou-refaire-site" rel="noopener">Lire l'article «&nbsp;Mon site WordPress est lent&nbsp;: l'optimiser ou le refaire&nbsp;?&nbsp;»</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">Banc d'essai <b>WP</b></p>
+        <p class="footer__small">Outil de démonstration d'une agence web fictive. Les verdicts sont indicatifs et ne remplacent pas un audit de votre site.</p>
+      </div>
+      <div>
+        <p class="footer__h">Nous joindre</p>
+        <ul class="footer__list">
+          <li><a href="tel:+213000000000">+213 00 00 00 00</a></li>
+          <li><a href="https://wa.me/213000000000" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:contact@exemple.dz">contact@exemple.dz</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__h">Mentions</p>
+        <p class="footer__small">Site de démonstration au contenu fictif, non indexé. Aucune donnée n'est collectée ni envoyée&nbsp;: vos saisies restent dans ce navigateur (stockage local que vous pouvez effacer à tout moment).</p>
+        <button type="button" class="linkbtn linkbtn--light" id="forget">Effacer toutes mes données locales</button>
+        <p class="footer__small" id="forget-msg" aria-live="polite"></p>
+      </div>
+    </div>
+    <p class="footer__print">Diagnostic imprimé depuis l'outil de démonstration. Article de référence&nbsp;: https://www.sakinadz.com/blog/services/wordpress-lent-optimiser-ou-refaire-site</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
