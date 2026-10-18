@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mon e-mail pro : adresses, signature et réglages</title>
+<meta name="description" content="Outil de démonstration : préparez vos adresses e-mail professionnelles sur votre nom de domaine, créez votre signature et comprenez SPF, DKIM et DMARC. Aucune donnée n'est envoyée.">
+<meta name="theme-color" content="#6a4cff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%236a4cff'/%3E%3Cpath d='M12 20h40v26H12z' fill='none' stroke='white' stroke-width='4'/%3E%3Cpath d='M12 20l20 15 20-15' fill='none' stroke='white' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#outil">Aller directement à l'outil</a>
+<div class="demo-banner" role="note">Site de démonstration – contenu fictif</div>
+
+<header class="masthead">
+  <a class="brand" href="index.html" aria-label="Guichet Courriel, accueil de l'outil">
+    <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+      <circle cx="20" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <circle cx="20" cy="24" r="12" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M13 20h14v9H13z M13 20l7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M33 16c3-2 5 2 8 0M33 22c3-2 5 2 8 0M33 28c3-2 5 2 8 0M33 34c3-2 5 2 8 0" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    </svg>
+    <span class="brand-name">Guichet <em>Courriel</em></span>
+  </a>
+  <nav class="masthead-nav" aria-label="Liens utiles">
+    <a href="https://www.sakinadz.com/blog/services/adresse-email-professionnelle-nom-de-domaine">Lire l'article</a>
+    <a class="masthead-phone" href="tel:+21300000000">+213 00 00 00 00</a>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- ============ HÉROS : l'enveloppe en grand plan ============ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="kicker">Trois guichets · aucune donnée envoyée</p>
+      <h1 id="hero-title" class="hero-title">Votre courrier,<br><span>à votre nom.</span></h1>
+      <p class="hero-lead">Une adresse du type <strong>contact@votredomaine</strong> rassure banques, fournisseurs étrangers et grands clients. Préparez ici vos adresses, votre signature, et comprenez les trois réglages qui évitent à vos e-mails de finir en indésirables.</p>
+      <ol class="hero-steps">
+        <li><a href="#outil" data-goto="adresses"><b>01</b> Mes adresses</a></li>
+        <li><a href="#outil" data-goto="signature"><b>02</b> Ma signature</a></li>
+        <li><a href="#outil" data-goto="reglages"><b>03</b> Réglages</a></li>
+      </ol>
+    </div>
+
+    <figure class="envelope" aria-label="Aperçu d'une enveloppe envoyée depuis votre adresse professionnelle">
+      <div class="envelope-paper">
+        <div class="stamp" aria-hidden="true">
+          <svg viewBox="0 0 100 120" focusable="false">
+            <rect x="0" y="0" width="100" height="120" fill="#6a4cff"/>
+            <rect x="15" y="15" width="70" height="90" fill="none" stroke="#fff" stroke-width="1.5"/>
+            <path d="M22 70h56v26H22z" fill="none" stroke="#fff" stroke-width="2.5"/>
+            <path d="M22 70l28 16 28-16" fill="none" stroke="#fff" stroke-width="2.5"/>
+            <text x="50" y="38" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="22" font-weight="800" fill="#fff">.dz</text>
+            <text x="50" y="56" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="8" letter-spacing="1.5" fill="#fff">COURRIEL PRO</text>
+          </svg>
+        </div>
+        <div class="postmark postmark--hero" aria-hidden="true" data-postmark="hero"></div>
+        <dl class="env-head">
+          <div><dt>De</dt><dd><span class="live-address" data-live="from">contact@mon-activite.dz</span></dd></div>
+          <div><dt>À</dt><dd>un-client@exemple.dz</dd></div>
+          <div><dt>Objet</dt><dd>Votre devis est prêt</dd></div>
+        </dl>
+        <p class="env-note">Par avion · courrier authentifié</p>
+      </div>
+      <figcaption class="sr-only">L'en-tête se met à jour avec le domaine que vous saisissez dans l'onglet « Mes adresses ».</figcaption>
+    </figure>
+  </section>
+
+  <div class="airmail-band" aria-hidden="true"><span>Par avion</span><span>Courrier professionnel</span><span>Par avion</span><span>Courrier professionnel</span><span>Par avion</span></div>
+
+  <!-- ============ L'OUTIL ============ -->
+  <section id="outil" class="tool" aria-labelledby="outil-title" tabindex="-1">
+    <h2 id="outil-title" class="sr-only">L'outil en trois guichets</h2>
+    <div class="tablist" role="tablist" aria-label="Les trois guichets de l'outil">
+      <button class="tab" role="tab" id="tab-adresses" aria-controls="panel-adresses" aria-selected="true" type="button">
+        <span class="tab-num">01</span><span class="tab-label">Mes adresses</span><span class="tab-sub">Rôles et noms</span>
+      </button>
+      <button class="tab" role="tab" id="tab-signature" aria-controls="panel-signature" aria-selected="false" tabindex="-1" type="button">
+        <span class="tab-num">02</span><span class="tab-label">Ma signature</span><span class="tab-sub">Aperçu et copie</span>
+      </button>
+      <button class="tab" role="tab" id="tab-reglages" aria-controls="panel-reglages" aria-selected="false" tabindex="-1" type="button">
+        <span class="tab-num">03</span><span class="tab-label">Réglages</span><span class="tab-sub">SPF, DKIM, DMARC</span>
+      </button>
+    </div>
+
+    <!-- ===================== PANNEAU 1 : ADRESSES ===================== -->
+    <div class="panel" role="tabpanel" id="panel-adresses" aria-labelledby="tab-adresses" tabindex="0">
+      <div class="panel-head">
+        <p class="panel-kicker">Guichet 01</p>
+        <h2 class="panel-title">Vos adresses, <em>une par rôle</em></h2>
+        <p class="panel-intro">Indiquez votre activité et votre nom de domaine. Sans domaine, pas d'adresse professionnelle&nbsp;: c'est lui qui vous appartient et qui vous permet de changer de fournisseur sans changer d'adresse.</p>
+      </div>
+
+      <div class="addr-layout">
+        <form class="form-card" id="form-adresses" novalidate>
+          <p class="form-demo">Démonstration : aucune donnée n'est envoyée. Rien n'est vérifié en ligne, pas même la disponibilité du domaine.</p>
+
+          <div class="field">
+            <label for="activite">Nom de l'activité</label>
+            <input id="activite" name="activite" type="text" autocomplete="organization" placeholder="Ex. Atelier Lina Couture" maxlength="80">
+          </div>
+
+          <div class="field">
+            <label for="domaine">Votre nom de domaine</label>
+            <input id="domaine" name="domaine" type="text" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Ex. mon-activite.dz" aria-describedby="domaine-aide domaine-msg" maxlength="120">
+            <p class="hint" id="domaine-aide">Collez-le tel quel, même avec «&nbsp;https://&nbsp;» ou «&nbsp;www.&nbsp;» : l'outil le nettoie.</p>
+            <div class="domain-msg" id="domaine-msg" aria-live="polite"></div>
+          </div>
+
+          <fieldset class="field">
+            <legend>Adresses de rôle</legend>
+            <p class="hint">Elles restent à l'entreprise quand une personne part.</p>
+            <div class="checks">
+              <label class="check"><input type="checkbox" name="role" value="contact" checked><span>contact@</span></label>
+              <label class="check"><input type="checkbox" name="role" value="commercial" checked><span>commercial@</span></label>
+              <label class="check"><input type="checkbox" name="role" value="facturation" checked><span>facturation@</span></label>
+              <label class="check"><input type="checkbox" name="role" value="recrutement" checked><span>recrutement@</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Adresses nominatives <span class="opt">(facultatif)</span></legend>
+            <p class="hint">Pour le contact personnel avec un client. Saisissez les noms en lettres latines.</p>
+            <div class="people" id="people"></div>
+            <button type="button" class="btn btn--ghost" id="add-person">Ajouter une personne</button>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Format des adresses nominatives</legend>
+            <div class="radios" role="radiogroup" aria-label="Format des adresses nominatives">
+              <label class="radio"><input type="radio" name="format" value="prenom" checked><span><b>prénom@</b> le plus court à dicter</span></label>
+              <label class="radio"><input type="radio" name="format" value="prenom.nom"><span><b>prénom.nom@</b> évite les doublons</span></label>
+              <label class="radio"><input type="radio" name="format" value="p.nom"><span><b>p.nom@</b> initiale et nom</span></label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn--ghost" data-action="reset-adresses">Réinitialiser ce guichet</button>
+          </div>
+        </form>
+
+        <div class="addr-output" aria-labelledby="carnet-title">
+          <div class="carnet-head">
+            <h3 id="carnet-title" class="h3">Votre carnet d'adresses</h3>
+            <p class="carnet-domain">sur <span data-live="domain">mon-activite.dz</span><span class="carnet-example" data-live="example"> (exemple)</span></p>
+          </div>
+          <ul class="labels" id="labels" aria-live="polite"></ul>
+          <div class="output-actions">
+            <button type="button" class="btn btn--solid" id="copy-list">Copier la liste</button>
+            <button type="button" class="btn btn--ghost" data-goto="signature">Passer à la signature</button>
+            <p class="status" id="copy-list-status" role="status" aria-live="polite"></p>
+          </div>
+          <textarea class="fallback-text" id="list-fallback" aria-label="Liste des adresses à copier manuellement" readonly hidden></textarea>
+        </div>
+      </div>
+
+      <div class="rules">
+        <h3 class="h3 rules-title">Le règlement du guichet</h3>
+        <ol class="rules-list">
+          <li><b>contact@</b> pour les demandes générales.</li>
+          <li><b>Des adresses de rôle</b> (commercial@, facturation@, recrutement@) qui survivent aux départs.</li>
+          <li><b>Des adresses nominatives</b> pour le contact personnel avec un client.</li>
+          <li><b>Courtes et faciles à dicter</b> au téléphone.</li>
+          <li><b>Une boîte et un mot de passe par personne</b>, jamais un seul accès pour toute l'équipe.</li>
+        </ol>
+        <div class="where">
+          <h4 class="h4">Où afficher l'adresse, partout la même</h4>
+          <ul class="where-list">
+            <li>Pied de page du site</li><li>Page contact</li><li>Mentions légales</li><li>Fiche d'établissement sur les cartes en ligne</li><li>Signatures d'e-mail</li><li>Devis et factures</li>
+          </ul>
+          <p class="small">La cohérence aide vos clients et les moteurs de recherche.</p>
+        </div>
+      </div>
+
+      <!-- Comparateur des trois façons -->
+      <section class="compare" aria-labelledby="compare-title">
+        <div class="compare-head">
+          <h3 id="compare-title" class="compare-title">Trois façons de recevoir ce courrier</h3>
+          <fieldset class="situation">
+            <legend>Votre situation</legend>
+            <div class="radios radios--inline" role="radiogroup" aria-label="Votre situation">
+              <label class="radio"><input type="radio" name="situation" value="redirection"><span>Seul(e) ou très petite structure</span></label>
+              <label class="radio"><input type="radio" name="situation" value="hebergeur"><span>Petite équipe, site déjà sur un hébergement mutualisé</span></label>
+              <label class="radio"><input type="radio" name="situation" value="payante"><span>Besoin d'agenda, de stockage et d'outils de collaboration</span></label>
+            </div>
+          </fieldset>
+          <p class="compare-reading" id="compare-reading" aria-live="polite">Choisissez votre situation pour mettre en avant la formule la plus proche. C'est une piste, pas une obligation.</p>
+        </div>
+
+        <div class="compare-grid">
+          <article class="offer" data-offer="redirection">
+            <p class="offer-num">1</p>
+            <h4 class="offer-title">La réexpédition <span>redirection (alias)</span></h4>
+            <dl class="offer-rows">
+              <div><dt>Le principe</dt><dd>Le courrier envoyé à votre domaine est transféré vers une boîte que vous utilisez déjà, par exemple une messagerie gratuite.</dd></div>
+              <div><dt>Le coût</dt><dd>Simple et souvent gratuit.</dd></div>
+              <div><dt>Répondre depuis l'adresse</dt><dd>Demande un serveur d'envoi authentifié.</dd></div>
+              <div><dt>Pour qui</dt><dd>Freelances et très petites structures.</dd></div>
+            </dl>
+          </article>
+          <article class="offer" data-offer="hebergeur">
+            <p class="offer-num">2</p>
+            <h4 class="offer-title">La boîte au guichet <span>boîtes de l'hébergeur</span></h4>
+            <dl class="offer-rows">
+              <div><dt>Le principe</dt><dd>Des boîtes incluses dans beaucoup d'hébergements mutualisés, avec un webmail.</dd></div>
+              <div><dt>Le coût</dt><dd>Comprises dans l'offre d'hébergement quand elle les inclut.</dd></div>
+              <div><dt>Stockage et spam</dt><dd>Stockage et filtrage du spam variables selon l'hébergeur.</dd></div>
+              <div><dt>Pour qui</dt><dd>Petites équipes déjà sur un hébergement mutualisé.</dd></div>
+            </dl>
+          </article>
+          <article class="offer" data-offer="payante">
+            <p class="offer-num">3</p>
+            <h4 class="offer-title">Le service complet <span>messagerie professionnelle payante</span></h4>
+            <dl class="offer-rows">
+              <div><dt>Le principe</dt><dd>Des boîtes complètes avec agenda, stockage et outils de collaboration.</dd></div>
+              <div><dt>Le coût</dt><dd>Facturé par utilisateur et par mois (tarif à valider auprès du fournisseur).</dd></div>
+              <div><dt>L'astuce</dt><dd>Une seule licence, avec plusieurs alias redirigés vers elle&nbsp;: <span class="alias-demo" id="alias-demo">contact@, commercial@, facturation@</span>.</dd></div>
+              <div><dt>Pour qui</dt><dd>Les équipes qui ont besoin d'agenda et de travail partagé.</dd></div>
+            </dl>
+          </article>
+        </div>
+        <p class="small compare-src">Informations relevées dans l'article, à titre indicatif. Aucun fournisseur n'est recommandé ici.</p>
+      </section>
+    </div>
+
+    <!-- ===================== PANNEAU 2 : SIGNATURE ===================== -->
+    <div class="panel" role="tabpanel" id="panel-signature" aria-labelledby="tab-signature" tabindex="0">
+      <div class="panel-head">
+        <p class="panel-kicker">Guichet 02</p>
+        <h2 class="panel-title">Votre signature, <em>comme une carte de visite</em></h2>
+        <p class="panel-intro">La signature est l'un des endroits où afficher votre adresse professionnelle. Remplissez les champs&nbsp;: l'aperçu suit en direct. Les champs vides affichent un exemple fictif.</p>
+      </div>
+
+      <div class="sig-layout">
+        <form class="form-card" id="form-signature" novalidate>
+          <p class="form-demo">Démonstration : aucune donnée n'est envoyée.</p>
+          <div class="field-row">
+            <div class="field">
+              <label for="sig-nom">Prénom et nom</label>
+              <input id="sig-nom" type="text" autocomplete="name" placeholder="Yasmine Larbi" maxlength="60">
+            </div>
+            <div class="field">
+              <label for="sig-fonction">Fonction</label>
+              <input id="sig-fonction" type="text" autocomplete="organization-title" placeholder="Gérante" maxlength="60">
+            </div>
+          </div>
+          <div class="field">
+            <label for="sig-activite">Activité</label>
+            <input id="sig-activite" type="text" autocomplete="organization" placeholder="Reprise du guichet 01" maxlength="80">
+            <p class="hint">Reprend par défaut le nom saisi dans «&nbsp;Mes adresses&nbsp;».</p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="sig-tel">Téléphone</label>
+              <input id="sig-tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="+213 00 00 00 00" maxlength="25" aria-describedby="sig-tel-msg">
+              <p class="hint" id="sig-tel-msg" aria-live="polite">Format international +213 conseillé.</p>
+            </div>
+            <div class="field">
+              <label for="sig-ville">Ville ou wilaya</label>
+              <input id="sig-ville" type="text" autocomplete="address-level2" placeholder="Oran" maxlength="60">
+            </div>
+          </div>
+          <div class="field">
+            <label for="sig-email">Adresse affichée</label>
+            <select id="sig-email"></select>
+            <p class="hint">La liste vient de votre carnet d'adresses (guichet 01).</p>
+          </div>
+          <label class="check check--wide"><input type="checkbox" id="sig-whatsapp"><span>Ajouter un lien WhatsApp (à partir du téléphone)</span></label>
+          <label class="check check--wide"><input type="checkbox" id="sig-site" checked><span>Afficher l'adresse du site</span></label>
+
+          <fieldset class="field">
+            <legend>Mise en page</legend>
+            <div class="radios radios--inline" role="radiogroup" aria-label="Mise en page de la signature">
+              <label class="radio"><input type="radio" name="sig-layout" value="classique" checked><span>Classique</span></label>
+              <label class="radio"><input type="radio" name="sig-layout" value="carte"><span>Carte</span></label>
+              <label class="radio"><input type="radio" name="sig-layout" value="sobre"><span>Sobre</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>Couleur d'accent</legend>
+            <div class="radios radios--inline swatches" role="radiogroup" aria-label="Couleur d'accent">
+              <label class="radio swatch"><input type="radio" name="sig-color" value="#6a4cff" checked><span><i style="background:#6a4cff"></i>Violet</span></label>
+              <label class="radio swatch"><input type="radio" name="sig-color" value="#17132e"><span><i style="background:#17132e"></i>Encre</span></label>
+              <label class="radio swatch"><input type="radio" name="sig-color" value="#0f7a5c"><span><i style="background:#0f7a5c"></i>Vert sapin</span></label>
+            </div>
+          </fieldset>
+          <div class="form-actions">
+            <button type="button" class="btn btn--ghost" data-action="reset-signature">Réinitialiser ce guichet</button>
+          </div>
+        </form>
+
+        <div class="sig-stage">
+          <article class="mail" aria-label="Aperçu de l'e-mail avec votre signature">
+            <div class="mail-stripes" aria-hidden="true"></div>
+            <dl class="mail-head">
+              <div><dt>De</dt><dd data-live="from">contact@mon-activite.dz</dd></div>
+              <div><dt>À</dt><dd>un-client@exemple.dz</dd></div>
+              <div><dt>Objet</dt><dd>Suite à notre échange</dd></div>
+            </dl>
+            <div class="mail-body">
+              <p>Bonjour,</p>
+              <p>Merci pour votre appel de ce matin. Vous trouverez le devis en pièce jointe&nbsp;; je reste disponible pour en parler.</p>
+              <p>Bien cordialement,</p>
+              <div class="sig-render" id="sig-render"></div>
+            </div>
+          </article>
+
+          <div class="card-flip" id="card-flip">
+            <div class="card-flip-inner">
+              <div class="card-face card-front" id="card-front" aria-hidden="false">
+                <p class="card-tag">Recto · mise en forme</p>
+                <div class="card-sig" id="card-sig"></div>
+              </div>
+              <div class="card-face card-back" id="card-back" aria-hidden="true">
+                <p class="card-tag">Verso · texte brut</p>
+                <pre class="card-plain" id="card-plain"></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="sig-actions">
+            <button type="button" class="btn btn--ghost" id="flip-card" aria-pressed="false">Retourner la carte</button>
+            <button type="button" class="btn btn--solid" id="copy-html">Copier la signature (mise en forme)</button>
+            <button type="button" class="btn btn--ghost" id="copy-text">Copier en texte brut</button>
+            <p class="status" id="copy-sig-status" role="status" aria-live="polite"></p>
+          </div>
+          <div class="fallback" id="sig-fallback" hidden>
+            <p><b>Copie automatique indisponible ici</b> (fréquent quand la page est ouverte comme fichier local). Sélectionnez le contenu ci-dessous puis faites <kbd>Ctrl</kbd>+<kbd>C</kbd> (<kbd>Cmd</kbd>+<kbd>C</kbd> sur Mac).</p>
+            <label for="sig-fallback-text" class="small">Contenu à copier</label>
+            <textarea id="sig-fallback-text" class="fallback-text" readonly></textarea>
+          </div>
+          <p class="small">Collez la version mise en forme dans les réglages de signature de votre messagerie. Si elle ne garde pas la mise en page, utilisez la version texte brut.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== PANNEAU 3 : RÉGLAGES ===================== -->
+    <div class="panel" role="tabpanel" id="panel-reglages" aria-labelledby="tab-reglages" tabindex="0">
+      <div class="panel-head">
+        <p class="panel-kicker">Guichet 03</p>
+        <h2 class="panel-title">Trois contrôles <em>sur le trajet de la lettre</em></h2>
+        <p class="panel-intro">SPF, DKIM et DMARC sont des réglages DNS de votre domaine. Ils évitent que vos e-mails finissent en indésirables ou que quelqu'un envoie des messages en se faisant passer pour vous.</p>
+      </div>
+
+      <ol class="checkpoints">
+        <li class="cp">
+          <p class="cp-code">SPF</p>
+          <h3 class="cp-title">La liste des bureaux d'envoi autorisés</h3>
+          <p>SPF liste les serveurs autorisés à envoyer des e-mails pour votre domaine. Le destinataire vérifie que la lettre part bien d'un de ces bureaux.</p>
+          <p class="cp-warn"><b>Un seul enregistrement SPF par domaine.</b> Deux enregistrements s'annulent.</p>
+        </li>
+        <li class="cp">
+          <p class="cp-code">DKIM</p>
+          <h3 class="cp-title">Le cachet sur l'enveloppe</h3>
+          <p>DKIM ajoute une signature numérique à chaque message. Le destinataire la vérifie avec une clé publique publiée dans le DNS de votre domaine&nbsp;: un cachet que personne d'autre ne peut imiter.</p>
+        </li>
+        <li class="cp">
+          <p class="cp-code">DMARC</p>
+          <h3 class="cp-title">La consigne laissée au guichet d'arrivée</h3>
+          <p>DMARC dit aux destinataires quoi faire des messages qui échouent aux contrôles SPF ou DKIM&nbsp;: <b>rien</b> («&nbsp;none&nbsp;»), <b>quarantaine</b> ou <b>rejet</b>. On commence souvent par «&nbsp;none&nbsp;» pour observer, puis on durcit.</p>
+        </li>
+      </ol>
+
+      <!-- Élément signature : le trajet de la lettre -->
+      <section class="journey" aria-labelledby="journey-title">
+        <div class="journey-head">
+          <h3 id="journey-title" class="journey-title">Le trajet de la lettre</h3>
+          <p class="journey-sub">Simulation simplifiée : réglez votre domaine, choisissez la lettre, puis suivez-la jusqu'à l'arrivée. Rien n'est envoyé.</p>
+        </div>
+
+        <div class="journey-controls">
+          <fieldset class="jc">
+            <legend>Quelle lettre&nbsp;?</legend>
+            <div class="radios" role="radiogroup" aria-label="Quelle lettre">
+              <label class="radio"><input type="radio" name="sim-letter" value="vraie" checked><span>Votre vraie lettre, envoyée par votre serveur</span></label>
+              <label class="radio"><input type="radio" name="sim-letter" value="usurpee"><span>Une lettre usurpée, qui imite votre adresse</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="jc">
+            <legend>Votre domaine a-t-il…</legend>
+            <label class="check check--wide"><input type="checkbox" id="sim-spf" checked><span>un enregistrement SPF</span></label>
+            <label class="check check--wide"><input type="checkbox" id="sim-dkim" checked><span>une signature DKIM</span></label>
+          </fieldset>
+          <fieldset class="jc">
+            <legend>Consigne DMARC</legend>
+            <div class="radios" role="radiogroup" aria-label="Consigne DMARC">
+              <label class="radio"><input type="radio" name="sim-dmarc" value="absent"><span>Aucune consigne</span></label>
+              <label class="radio"><input type="radio" name="sim-dmarc" value="none" checked><span>« none » : observer</span></label>
+              <label class="radio"><input type="radio" name="sim-dmarc" value="quarantine"><span>Quarantaine</span></label>
+              <label class="radio"><input type="radio" name="sim-dmarc" value="reject"><span>Rejet</span></label>
+            </div>
+          </fieldset>
+          <div class="jc jc--go">
+            <button type="button" class="btn btn--solid btn--big" id="sim-run">Suivre la lettre</button>
+            <button type="button" class="btn btn--ghost" id="sim-reset">Revenir au départ</button>
+          </div>
+        </div>
+
+        <div class="route" id="route">
+          <div class="route-line" aria-hidden="true"></div>
+          <ol class="stations">
+            <li class="station station--start" data-station="0"><span class="st-label">Départ</span><span class="st-place" data-live="domain">mon-activite.dz</span></li>
+            <li class="station" data-station="1"><span class="st-pm" data-pm="spf"></span><span class="st-label">Contrôle SPF</span><span class="st-res" id="res-spf">En attente</span></li>
+            <li class="station" data-station="2"><span class="st-pm" data-pm="dkim"></span><span class="st-label">Contrôle DKIM</span><span class="st-res" id="res-dkim">En attente</span></li>
+            <li class="station" data-station="3"><span class="st-pm" data-pm="dmarc"></span><span class="st-label">Consigne DMARC</span><span class="st-res" id="res-dmarc">En attente</span></li>
+            <li class="station station--end" data-station="4">
+              <span class="st-label">Arrivée</span>
+              <ul class="trays" aria-label="Destinations possibles">
+                <li data-tray="inbox">Boîte de réception</li>
+                <li data-tray="spam">Indésirables</li>
+                <li data-tray="reject">Refusée</li>
+              </ul>
+            </li>
+          </ol>
+          <div class="letter" id="letter" aria-hidden="true">
+            <svg viewBox="0 0 80 56" focusable="false"><rect x="2" y="2" width="76" height="52" fill="#fff" stroke="#17132e" stroke-width="3"/><path d="M2 2l38 28L78 2" fill="none" stroke="#17132e" stroke-width="3"/><rect x="58" y="8" width="14" height="17" fill="#6a4cff"/></svg>
+          </div>
+        </div>
+        <div class="verdict" id="sim-verdict" role="status" aria-live="polite">
+          <p class="verdict-title">La lettre attend au départ.</p>
+          <p>Lancez le trajet pour voir ce que deviendrait le message avec ces réglages.</p>
+        </div>
+        <p class="small">Simulation pédagogique et simplifiée, basée sur l'article. Les valeurs exactes des enregistrements sont fournies par votre hébergeur ou votre messagerie (à valider avec eux).</p>
+      </section>
+
+      <section class="errors" aria-labelledby="errors-title">
+        <div class="errors-head">
+          <h3 id="errors-title" class="errors-title">Avant d'affranchir&nbsp;: les erreurs fréquentes</h3>
+          <p>Cochez ce qui est déjà en ordre. Chaque point réglé oblitère un timbre.</p>
+        </div>
+        <div class="errors-body">
+          <ul class="checklist" id="checklist">
+            <li><label class="check check--item"><input type="checkbox" value="domaine"><span><b>Le domaine est enregistré à votre nom</b>, et non à celui d'un prestataire.</span></label></li>
+            <li><label class="check check--item"><input type="checkbox" value="spfdkim"><span><b>SPF et DKIM sont en place.</b> Sans eux, même un petit domaine est plus souvent classé en indésirables.</span></label></li>
+            <li><label class="check check--item"><input type="checkbox" value="unspf"><span><b>Un seul enregistrement SPF.</b> Deux enregistrements s'annulent.</span></label></li>
+            <li><label class="check check--item"><input type="checkbox" value="boites"><span><b>Une boîte et un mot de passe par personne</b>, pas une seule boîte pour toute l'équipe.</span></label></li>
+            <li><label class="check check--item"><input type="checkbox" value="site"><span><b>Le site affiche une adresse sur votre domaine</b>, pas une adresse gratuite.</span></label></li>
+          </ul>
+          <div class="stampsheet" aria-hidden="true" id="stampsheet"></div>
+        </div>
+        <p class="errors-score" id="errors-score" role="status" aria-live="polite">0 point sur 5 réglé.</p>
+        <p class="small">Depuis 2024, les grands fournisseurs de messagerie gratuite exigent l'authentification des expéditeurs qui envoient de gros volumes. Même pour un petit domaine, ces réglages comptent.</p>
+      </section>
+    </div>
+  </section>
+
+  <section class="outro" aria-labelledby="outro-title">
+    <div class="outro-inner">
+      <h2 id="outro-title" class="outro-title">Le reste du courrier est dans l'article.</h2>
+      <p>Pourquoi une adresse pro, comment l'obtenir, quels réglages demander&nbsp;: l'article détaille chaque étape.</p>
+      <div class="outro-actions">
+        <a class="btn btn--light btn--big" href="https://www.sakinadz.com/blog/services/adresse-email-professionnelle-nom-de-domaine">Lire l'article complet</a>
+        <button type="button" class="btn btn--outline-light" data-action="print">Imprimer mon récapitulatif</button>
+      </div>
+      <address class="contact">
+        <p>Besoin d'un coup de main pour les réglages&nbsp;?</p>
+        <a href="tel:+21300000000">+213 00 00 00 00</a>
+        <a href="https://wa.me/213000000000">WhatsApp</a>
+        <a href="mailto:contact@exemple.dz">contact@exemple.dz</a>
+      </address>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p><b>Guichet Courriel</b> est un outil de démonstration fictif qui illustre un article de sakinadz.com. Noms, domaines et coordonnées sont fictifs ; les informations techniques sont un résumé de l'article, à titre indicatif.</p>
+  <p>Mentions&nbsp;: aucun cookie, aucune mesure d'audience, aucun envoi de données. Vos saisies sont conservées uniquement dans ce navigateur (stockage local). <button class="linklike" type="button" data-action="clear-storage">Effacer mes saisies</button> <span id="clear-msg" role="status" aria-live="polite"></span></p>
+  <p class="print-only">Article : https://www.sakinadz.com/blog/services/adresse-email-professionnelle-nom-de-domaine</p>
+</footer>
+
+<noscript><p class="noscript">Sans JavaScript, les trois guichets s'affichent l'un sous l'autre, mais les propositions d'adresses, l'aperçu de signature et la simulation ne fonctionnent pas.</p></noscript>
+<script src="js/app.js"></script>
+</body>
+</html>
