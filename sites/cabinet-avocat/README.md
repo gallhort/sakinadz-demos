@@ -14,27 +14,43 @@ profession » figure sur chaque page.
 
 Le site existe en français et en arabe (RTL), avec un sélecteur de langue dans l'en-tête.
 
-## Choix de design
+## Choix de design : « Frontispice »
 
-Registre éditorial, sobre et haut de gamme, sans effet tape-à-l'œil.
+Refonte visuelle : audacieuse dans la composition et la typographie, sobre dans le ton.
+Le site se lit comme la page de titre d'un ouvrage de droit posée sur une façade classique.
 
-- **Palette** : marine `#14213d` (en-têtes de page, bande de contact, pied de page),
-  pierre `#e5e1da` et papier `#f8f6f2` (fonds), bordeaux `#7a1f2b` en touche discrète
-  (filets, numéros, liens, filet sous les en-têtes).
-- **Typographie** : Cormorant Garamond (titres, italiques, numéros, coordonnées en grand)
-  et Source Sans 3 (texte, petites capitales espacées pour les libellés).
-  Ces deux familles n'ont pas de glyphes arabes : la version arabe s'appuie sur les polices
-  système (Noto Naskh/Noto Sans Arabic, Amiri, Tahoma…).
-- **Composition** : grand titre en deux temps (romain puis italique), façade classique dessinée
-  au trait en SVG, bande de coordonnées sous l'en-tête, domaines en liste éditoriale numérotée,
-  phrase de principe d'exercice (ce n'est pas un témoignage), étapes jalonnées, bande finale
-  « Prendre rendez-vous » avec le numéro en grand.
-- **Mouvement** : seulement de légères transitions au survol (soulignement, flèche),
-  désactivées avec `prefers-reduced-motion`.
-- **RTL** : la feuille de style n'utilise que des propriétés logiques (`margin-inline`,
-  `inset-inline-start`, `border-block-end`…), la même CSS sert donc les deux sens d'écriture.
-- **Plan d'accès** : plan schématique en SVG (fictif, sans échelle), remplaçable par une carte
-  sur le site réel.
+- **Palette noir d'encre / ivoire** : le marine du brief (`#14213d`) est poussé jusqu'à un noir
+  d'encre `#0b1120` (en-têtes, maxime, bande de contact, pied de page), face à un ivoire `#f4f0e8`
+  et à la pierre `#e5e1da`. Le bordeaux `#7a1f2b` est réservé à de rares touches : le sceau,
+  la ligne de justification, les numéros d'articles, les appels de note, le jour courant.
+- **Typographie monumentale** : Cormorant Garamond en capitales géantes (jusqu'à 17,5 rem) pour le
+  nom du cabinet et les titres de page ; Source Sans 3 en petites capitales espacées pour les
+  libellés. L'arabe garde ces deux familles pour le latin et les chiffres et retombe sur les
+  polices système (Noto Naskh Arabic, Amiri…), sans capitales ni interlettrage.
+- **Coupe nette** : le titre monumental de chaque page est coupé à sa base par l'aplat ivoire
+  de la section suivante (marge négative + `overflow: hidden`), souligné d'un filet bordeaux.
+  En arabe, l'aplat affleure sans couper les points sous la ligne.
+- **Architecture** : les six domaines forment un temple dessiné en CSS (entablement à denticules,
+  colonnes cannelées entre les articles, emmarchement) ; numérotation en chiffres romains géants
+  au trait (« Art. I » à « Art. VI ») ; folio romain géant sur chaque page intérieure ; niche à
+  colonnes en SVG pour l'emplacement du portrait ; mentions légales en articles numérotés.
+  Version arabe : chiffres occidentaux (« المادة 1 »), d'usage courant en Algérie.
+- **Composition d'ouvrage** : colonne de marge + corps de texte, notes de bas de page appelées
+  par un exposant bordeaux (la note « Textes à faire valider selon les règles de la profession »),
+  filets doubles en tête des registres (cartouche, horaires, barreau).
+- **Élément signature** : le sceau « MD » qui se grave une seule fois au chargement (les anneaux
+  se tracent, l'inscription circulaire se révèle par un masque qui tourne, le disque bordeaux se
+  pose) ; puis la ligne de justification bordeaux qui se trace sous le titre coupé.
+  Le sceau est un monogramme : son inscription reste en latin dans les deux langues.
+- **Mouvement très retenu** : le sceau, la montée du titre, la ligne de justification, l'apparition
+  douce de quelques blocs au défilement (une seule fois). Tout est neutralisé par
+  `prefers-reduced-motion`, et rien n'est masqué si le JavaScript ne s'exécute pas
+  (la classe `.rv` qui conditionne les apparitions est posée par `main.js` lui-même).
+- **RTL** : une seule feuille de style à propriétés logiques (`inset-inline-start`,
+  `border-block-end`…) ; seuls quelques réglages propres à l'arabe (interlignage, absence de
+  capitales et d'italique, sens des flèches).
+- **Plan d'accès** : plan schématique en SVG aux couleurs du site (fictif, sans échelle),
+  remplaçable par une carte sur le site réel.
 
 ## Pages
 
@@ -52,7 +68,7 @@ Registre éditorial, sobre et haut de gamme, sans effet tape-à-l'œil.
 cabinet-avocat/
 ├── index.html, prestations.html, a-propos.html, contact.html, mentions-legales.html
 ├── ar/              versions arabes (lang="ar", dir="rtl")
-├── css/style.css    styles communs (variables, grid, clamp, container queries)
+├── css/style.css    styles communs FR/AR (variables, grid, clamp, container queries, propriétés logiques)
 ├── js/main.js       interactions (facultatives)
 ├── brief.md, source-article.md
 └── README.md
@@ -60,8 +76,9 @@ cabinet-avocat/
 
 Interactions (`js/main.js`, le site reste utilisable sans JavaScript) :
 menu repliable sur mobile (Échap pour fermer), mise en évidence du jour courant dans les
-horaires (heure d'Alger), bouton « Copier l'adresse » de l'e-mail (masqué si le presse-papiers
-n'est pas disponible), sommaire de la page Prestations qui suit la section lue.
+horaires (heure d'Alger), bouton « Copier l'adresse » de l'e-mail (affiché seulement si le
+presse-papiers est disponible), sommaire de la page Prestations qui suit la section lue,
+apparitions au défilement. Le sceau et la ligne de justification sont animés en CSS pur.
 
 ## Lancer le site
 
@@ -89,7 +106,7 @@ Iframe :
   src="https://gallhort.github.io/sakinadz-demos/sites/cabinet-avocat/"
   title="Démo : site vitrine d'un cabinet d'avocat fictif"
   width="100%" height="720" loading="lazy"
-  style="border:1px solid #e5e1da;border-radius:4px">
+  style="border:1px solid #0b1120">
 </iframe>
 ```
 

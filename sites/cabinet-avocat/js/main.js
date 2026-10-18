@@ -1,10 +1,11 @@
-/* Cabinet Maître Démo – interactions discrètes. Le site reste entièrement utilisable sans JavaScript. */
+/* Cabinet Maître Démo – interactions discrètes. Le site reste entièrement utilisable sans JavaScript.
+   (La classe .js est posée dans le <head> pour éviter tout flash ; elle conditionne les apparitions.) */
 (function () {
   "use strict";
 
   var doc = document.documentElement;
   var isAr = doc.lang === "ar";
-  doc.classList.add("js");
+  doc.classList.add("js"); // déjà posée dans le <head>, conservée par sécurité
 
   /* Menu mobile */
   var toggle = document.querySelector(".nav-toggle");
@@ -60,10 +61,10 @@
 
   /* Copie de l'adresse e-mail */
   document.querySelectorAll(".copy[data-copy]").forEach(function (btn) {
-    if (!navigator.clipboard || !window.isSecureContext) {
-      btn.hidden = true; // file:// ou navigateur ancien : le lien mailto suffit
-      return;
-    }
+    // Bouton masqué par défaut : il n'apparaît que si le presse-papiers est disponible
+    // (en file:// ou sur un navigateur ancien, le lien mailto suffit).
+    if (!navigator.clipboard || !window.isSecureContext) return;
+    btn.hidden = false;
     var status = btn.parentNode.querySelector(".copy-status");
     var timer;
     btn.addEventListener("click", function () {
@@ -97,5 +98,21 @@
       var el = document.getElementById(id);
       if (el) observer.observe(el);
     });
+  }
+
+  /* Apparitions au défilement : une seule fois, puis l'élément reste en place */
+  var reveals = document.querySelectorAll("[data-reveal]");
+  if (reveals.length && "IntersectionObserver" in window) {
+    // La classe .rv n'est posée qu'ici : sans ce script, rien n'est jamais masqué.
+    doc.classList.add("rv");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
+    reveals.forEach(function (el) { io.observe(el); });
   }
 })();
