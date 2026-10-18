@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Contact – Horizon Immobilier (démo)</title>
+<meta name="description" content="Contacter Horizon Immobilier par WhatsApp, téléphone ou e-mail. Site de démonstration : aucune donnée n’est envoyée.">
+<meta name="theme-color" content="#0f2742">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230f2742'/%3E%3Cpath d='M6 22h20M9 22V12h14v10' stroke='%23c8a24a' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&amp;family=Manrope:wght@400..800&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<p class="demo-banner" role="note">Site de démonstration – contenu fictif</p>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Horizon Immobilier, accueil">
+    <span class="brand__mark">Horizon</span>
+    <span class="brand__sub">Immobilier<br>Alger</span>
+  </a>
+  <nav class="nav" aria-label="Navigation principale">
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul class="nav__list" id="menu"><li><a href="index.html">Accueil</a></li><li><a href="biens.html">Les biens</a></li><li><a href="agence.html">L'agence</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul>
+  </nav>
+  <div class="site-header__contact">
+    <a class="tel" href="tel:+213000000000">+213 00 00 00 00</a>
+    <a class="btn btn--wa btn--sm" href="https://wa.me/213000000000?text=Bonjour%20Horizon%20Immobilier%2C%20je%20souhaite%20%C3%A9changer%20avec%20un%20conseiller%20de%20l'agence.">WhatsApp</a>
+  </div>
+</header>
+<main id="contenu" tabindex="-1">
+
+<section class="contact" aria-labelledby="ct-title">
+  <p class="run" aria-hidden="true"><span>Horizon · Revue des biens</span><span>Nous écrire</span><span class="run__n">12</span></p>
+  <h1 id="ct-title" class="contact__title">Parlons<br><em>de votre bien.</em></h1>
+  <div class="contact__grid">
+    <div class="channels">
+      <a class="channel channel--wa" href="https://wa.me/213000000000?text=Bonjour%20Horizon%20Immobilier%2C%20je%20souhaite%20%C3%A9changer%20avec%20un%20conseiller%20de%20l'agence."><span class="channel__k">WhatsApp</span><span class="channel__v">+213 00 00 00 00</span><span class="channel__h">Le plus rapide. Pour un bien précis, utilisez plutôt le bouton de son annonce.</span></a>
+      <a class="channel" href="tel:+213000000000"><span class="channel__k">Téléphone</span><span class="channel__v">+213 00 00 00 00</span><span class="channel__h">Dimanche au jeudi, de 9 h à 17 h.</span></a>
+      <a class="channel" href="mailto:contact@exemple.dz"><span class="channel__k">E-mail</span><span class="channel__v">contact@exemple.dz</span><span class="channel__h">Pour les dossiers, documents et demandes détaillées.</span></a>
+      <div class="channel channel--static"><span class="channel__k">Bureau</span><span class="channel__v">12, rue de l’Exemple, Hydra, Alger</span><span class="channel__h">Sur rendez-vous de préférence.</span></div>
+      <p class="contact__visit"><strong>Visites :</strong> nous ne proposons pas d’agenda en ligne. Écrivez-nous sur WhatsApp en citant la référence du bien, nous convenons ensemble d’un créneau.</p>
+    </div>
+    <form class="form" id="form" novalidate aria-describedby="form-demo">
+      <h2 class="form__h">Ou laissez-nous un mot</h2>
+      <p class="form__demo" id="form-demo">Démonstration : aucune donnée n'est envoyée.</p>
+      <div class="field">
+        <label for="f-nom">Nom et prénom</label>
+        <input id="f-nom" name="nom" type="text" autocomplete="name" required aria-describedby="e-nom">
+        <p class="field__err" id="e-nom" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="f-tel">Téléphone</label>
+        <input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="+213 …" required aria-describedby="e-tel">
+        <p class="field__err" id="e-tel" aria-live="polite"></p>
+      </div>
+      <fieldset class="field field--choice">
+        <legend>Votre projet</legend>
+        <div class="choices">
+          <label><input type="radio" name="projet" value="acheter" checked> Acheter</label>
+          <label><input type="radio" name="projet" value="louer"> Louer</label>
+          <label><input type="radio" name="projet" value="vendre"> Vendre</label>
+          <label><input type="radio" name="projet" value="gestion"> Confier en gestion</label>
+          <label><input type="radio" name="projet" value="estimation"> Faire estimer</label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="f-msg">Votre message</label>
+        <textarea id="f-msg" name="message" rows="5" required aria-describedby="e-msg"></textarea>
+        <p class="field__err" id="e-msg" aria-live="polite"></p>
+      </div>
+      <button class="btn btn--navy" type="submit">Envoyer (démonstration)</button>
+      <p class="form__status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="colophon">
+  <div class="colophon__inner">
+    <div class="colophon__brand">
+      <p class="colophon__mark">Horizon</p>
+      <p class="colophon__tag">Agence immobilière à Alger. Vente, location, gestion locative et estimation.</p>
+    </div>
+    <div>
+      <h2 class="colophon__h">Nous joindre</h2>
+      <ul class="colophon__list">
+        <li><a href="tel:+213000000000">+213 00 00 00 00</a></li>
+        <li><a href="https://wa.me/213000000000?text=Bonjour%20Horizon%20Immobilier%2C%20je%20souhaite%20%C3%A9changer%20avec%20un%20conseiller%20de%20l'agence.">WhatsApp : +213 00 00 00 00</a></li>
+        <li><a href="mailto:contact@exemple.dz">contact@exemple.dz</a></li>
+        <li>12, rue de l’Exemple, Hydra, Alger</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="colophon__h">Pages</h2>
+      <ul class="colophon__list"><li><a href="index.html">Accueil</a></li><li><a href="biens.html">Les biens</a></li><li><a href="agence.html">L'agence</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul>
+    </div>
+    <div>
+      <h2 class="colophon__h">Colophon</h2>
+      <p class="colophon__small">Plans dessinés par l’agence, indicatifs et non contractuels. Prix, surfaces, personnes et adresses sont fictifs : ce site est une démonstration.</p>
+    </div>
+  </div>
+  <p class="colophon__base"><span>© 2026 Horizon Immobilier (agence fictive)</span><span>Revue des biens · N° 12 · Automne</span></p>
+</footer>
+<a class="wa-float" href="https://wa.me/213000000000?text=Bonjour%20Horizon%20Immobilier%2C%20je%20souhaite%20%C3%A9changer%20avec%20un%20conseiller%20de%20l'agence.">Écrire sur WhatsApp</a>
+</body>
+</html>
